@@ -1,0 +1,10 @@
+Step 1 - Locate the author.php file in your core classipress files
+
+Step 2 - On line 62 (classipress 3.1.5 and below) add these line of code
+
+			<?php if(function_exists("cp_rate_users")) {  cp_rate_users($curauth->ID); } ?>
+	
+		 On line 51 (Classipress 3.2 and above only!)
+		 
+		 	<div class="pad20"></div>
+		 	<?php if(function_exists("cp_rate_users")) {  cp_rate_users($curauth->ID); } ?>

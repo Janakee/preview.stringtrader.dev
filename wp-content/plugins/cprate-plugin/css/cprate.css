@@ -1,0 +1,176 @@
+/*
+Classipress Rated Author
+Current Version: 1.2
+Plugin Author: Julio Gallegos
+Author URL: http://myclassipro.com
+*/
+
+.jquery-ratings-star {
+width: 36px;
+height: 36px;
+background-image: url(images/empty-star.png);
+background-repeat: no-repeat;
+position: relative;
+float: left;
+margin-right: 2px;
+}
+.jquery-ratings-full {
+background-image: url(images/full-star.png);
+}
+h3.cprate-myrating {
+border-bottom:1px solid #DDD;
+padding-bottom:2px;
+margin-bottom:15px;
+font-size:16px;	
+}
+.cprate-myrating #total_count {
+color:#03F;
+}
+.postertab .member div.cprate-myrating {
+width:210px;
+font-size:100%;
+border:none;
+font-weight:bold;
+}
+.postertab .member div.cprate-myrating img {
+padding-top:0 !important;	
+}
+#cprate_wrapper input {
+color:#03F;
+}
+#cprate_feedback_form {
+padding:30px 20px;	
+}
+#cprate_feedback_form .cprate-pre{
+background-color:inherit !important;
+color:#03F;
+padding: 15px 0;
+font-size:11px;
+font-family:inherit;
+}
+#cprate_feedback_form .cprate-pre ul{
+padding-left:20px;
+}
+#cprate_feedback_form .cprate-pre ul li{
+padding:0;
+margin:0;
+line-height:11px;
+}
+#your_rating {
+padding-left:5px;
+padding-bottom:11px;
+padding-top:8px;
+font-weight:bold;
+}
+#your_rating span, #cprate_per {
+color:#03F;
+}
+#cprate-error, #cprate-error-rb {
+color:red;
+padding-left:10px;	
+}
+.cp-rate-stars, #cprate_loading img{
+background-color: none !important;
+border: none !important;
+border-radius: none !important;
+box-shadow: none !important;
+padding: 12px 0.5px 0 0 !important;
+}
+#cprate_loading {
+text-align:center;
+padding:20px 0 40px 0;	
+}
+#cprate_loading span {
+color:#03F;
+display:block;	
+}
+#cprate_thankyou {
+font-weight:bold;
+font-size:18px;	
+}
+#cprate_more {
+text-align:center;
+padding-top:20px;	
+}
+#cprate_more nobr{
+padding:0 5px;	
+}
+#cprate_feedback_history th{
+	text-align:left;
+	border-bottom:1px dotted #DDD;	
+}
+#cprate_feedback_history td {
+	line-height:23px;
+	border-bottom:1px solid #EEE;
+}
+#cprate_feedback_history .cprate-newrow {
+	font-weight:bold;
+	color:#00F;
+}
+#cprate_feedback_history .cprate-fbmod {
+text-align:center;
+line-height:38px;
+font-style:italic;	
+}
+.text-sub-comments
+{
+	display:block;
+}
+
+.text-sub-comments textarea
+{
+	width:300px;
+}
+
+.reply-back
+{
+	margin-left:0px;
+	display:block;
+}
+
+.reply-back input
+{
+	font-size:12px;
+}
+	
+.submit_subcomments
+{
+	/*text-align:center;*/
+	margin-bottom: 5px;
+    margin-top: 3px;
+}
+
+.submit_subcomments input
+{
+	font-size:12px;
+}
+
+.span_sub_comments
+{
+	margin-top:3px;
+}
+
+.sub-comments-quote
+{	
+    color: #777777;
+    font-size: 11px;
+    font-style: italic;    
+    padding-left: 50px;
+}
+
+.by_author
+{
+font-weight:bold;
+}
+
+.rating {overflow: hidden; margin: 10px 0 !important; display: block; background: #fff}
+.rating li {float: left; margin: 0 2px 2px 0; width: 23px; height: 22px; cursor: pointer; overflow: hidden;
+	list-style: none !important}
+.rating .l {float: left; height: 22px; width: 12px; background: #ccc url(images/pointy.png) 0 0}
+.rating .r {float: right; height: 22px; width: 11px; background: #ccc url(images/pointy.png) -12px 0}
+.rating .half .l {background-color: #333}
+.rating .half .r {background-color: #ccc}
+.rating .whole .l {background-color: #333}
+.rating .whole .r {background-color: #333}
+.rating .rover .l {background-color: #000}
+.rating .rover .r {background-color: #000}

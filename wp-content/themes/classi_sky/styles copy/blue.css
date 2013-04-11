@@ -1,0 +1,179 @@
+body { background:url(blue/headerbg.png) repeat-x left top !important; }
+/* main */
+h1.single, span.colour { color:#333;}
+div.bigright span { color:#333; font-weight: bold;} 
+div#mcwrap span { font-size: 16px; color:#333; font-weight: bold;}
+a { color:#1a83c5; text-decoration:underline;} 
+a:hover { color:#000; }
+
+/* breadcurmb ------------- */
+#crumbs { border-bottom:2px solid #FAFAFA;  }
+
+
+h1.single-ad, h1.single-ad a { color:#000; }
+
+/* featured listings homepage carousel */
+.shadowblockdir h2, .shadowblock h2 { color:#507083; background:none; }
+
+.content_res .shadowblockdir { background:url(blue/sepretor_hr.png) repeat-x left bottom; }
+.slider ul li:hover .attachment-ad-small { border:3px solid #333;  }
+span.price_sm { color:#e45e0d}
+
+.prev {  background:url(../images/i_arrow_left.png) no-repeat left top; }
+.next { background:url(../images/i_arrow_right.png) no-repeat left top; }
+
+/* tab control main */
+.tabcontrol ul.tabnavig li a { color:#868686; background:none; border:1px solid #fff; border-bottom:none; text-shadow:0 1px 0 #fff;}
+.tabcontrol ul.tabnavig li a.selected { color:#0076be; border:dashed 1px #c8c8c8; border-bottom:1px dashed #fff;  background:#fff; }
+.tabcontrol div.undertab { background:#fff; border-top:1px dashed #c8c8c8; }
+.tabcontrol div.undertab a { color:#6d8b9c; }
+.tabcontrol div.pricetab { background:#fff; border:1px dashed #c8c8c8; border-top:none;}
+
+
+
+/* home page directory category listing */
+#directory .catcol ul li.maincat{ border-top:1px dashed #DDD; }
+#directory .catcol ul li.maincat a{ color:#0076be;   }
+#directory .catcol ul li.cat-item a{ color:#000; }
+#directory .catcol ul li.cat-item a:hover{ color:#0076be; }
+#directory .catcol ul li.cat-item{ border-top:1px dashed #EFEFEF;}
+
+
+/* header */
+.header_top { }
+.header_main_bg {  }
+.header_top_res p { color:#7598c9; }
+.header_top_res p a { color:#000; text-decoration:none;}
+.header_top_res p a:hover { color:#666; }
+
+
+
+.header_main_res #logo h1 { color:#666666; font-size:38px; margin:0px; padding:0px; }
+.header_main_res #logo h1 a { color:#666666; text-decoration: none; margin:0px; padding:0px; }
+.header_main_res .description { color:#999999; font-family:Georgia,serif; font-size:14px; font-style:italic; }
+.header_menu { border-top:2px solid #eff7fb;  }
+.cp_logo {height:55px; width:222px; margin-bottom:20px; margin-top:15px; background:transparent url(../images/cp_logo_black.png) no-repeat scroll 0 0}
+
+
+/* main nav menu global styles*/
+.header_menu_res ul li.first { background:none;}
+.header_menu_res ul li a { color:#444d58; }
+.header_menu_res ul li:hover a { color:#000; background: #fff;text-shadow:0 1px 0 #fff; }
+.header_menu_res ul li.sfHover a.sf-with-ul, .header_menu_res ul li.mega:hover { color:#000; background:#fff;text-shadow:0 1px 0 #fff; -moz-box-shadow:  0px -1px 3px #d5d5d5; -webkit-box-shadow:  0px -1px 3px #d5d5d5; box-shadow: 0px -2px 3px #d5d5d5;  }
+.header_menu_res ul li.mega:hover  a { background:#fff !important; }
+.header_menu_res ul a  { color:#a3a3a3; }
+.header_menu_res ul li:hover a { background:#f0f8fe;  }
+.header_menu_res ul li.current_page_item, .header_menu_res ul li.current_page_parent a { color:#555; background:#f0f8fe; text-shadow:0 1px 0 #fff; }
+.header_menu_res ul li li.current_page_item { background:none; }
+.header_menu_res ul li.current_page_item a { color:#444d58; }
+.header_menu_res ul.children li a { background:#fff; border-top: none; border-left: none; }
+.header_menu_res ul .sf-sub-indicator {background:url(../images/arrow-superfish.png) no-repeat scroll 0 0 transparent;  }
+.header_menu_res ul li ul .sf-sub-indicator {background:url(../images/arrow-superfish-right.png) no-repeat;overflow:hidden;right:0;}
+.header_menu_res ul li ul  { background: #fff; border: 1px solid #dbdbdb; border-width:1px 1px 0;  }
+
+.header_menu_res ul.menu ul { background-color: #FFF; /*border:1px solid #eee; border-top:none; -moz-box-shadow: 1px 1px 5px #b7b7b7; -webkit-box-shadow: 1px 1px 5px #b7b7b7; box-shadow: 1px 1px 5px #b7b7b7;*/}
+.header_menu_res ul.menu ul ul.children { background-color: #FFF; border:1px solid #eee; border-top:none; -moz-box-shadow: 1px 1px 5px #b7b7b7; -webkit-box-shadow: 1px 1px 5px #b7b7b7; box-shadow: 1px 1px 5px #b7b7b7;}
+.header_menu_res ul.menu li ul li a  { color:#555; text-shadow:0 1px 0 #fff; }
+.header_menu_res ul.menu li ul li a.sf-with-ul:hover { background: #f4f4f4;}
+.header_menu_res ul.menu li ul li a:hover  { background: #f4f4f4; }
+.header_menu_res ul li:hover, .header_menu_res ul li.hover  { color: #555555; }
+
+
+/* main nav menu superfish styles */
+#nav li.sfHover a.sf-with-ul { color:#555555; background:#fff; text-shadow:0 1px 0 #fff;   }
+#nav .sf-sub-indicator {background:url(../images/arrow-superfish.png) no-repeat scroll 0 0 transparent;  }
+#nav li ul .sf-sub-indicator {background:url(../images/arrow-superfish-right.png) no-repeat; }
+
+/* category menu */
+div#adv_categories, .header_menu_res ul.sub-menu { background:#fff; border:1px solid #eee; border-top:none; 
+-moz-box-shadow: 1px 1px 5px #b7b7b7; -webkit-box-shadow: 1px 1px 5px #b7b7b7; box-shadow: 1px 1px 5px #b7b7b7;}
+div#adv_categories ul { background:none;border:none;}
+div#adv_categories ul li {border:none; text-shadow:0 1px 0 #FFFFFF; color:#949494; }
+div#adv_categories ul li a:hover  { background: #f4f4f4;}
+div#adv_categories .catcol { border-left:1px dotted #bdbdbd;   }
+div#adv_categories .catcol ul li ul {border-top:1px solid #e3e3e3;   }
+div#adv_categories .catcol ul li a { color:#545454; background:#f0f8fe;}
+div#adv_categories .catcol ul li.maincat { background: #fff; color:#0076be; border-top:1px solid #e3e3e3; }
+div#adv_categories .catcol ul li.maincat a { background: none; color:#0076be; }
+div#adv_categories .catcol ul li.maincat a:hover {background:none !important; }
+div#adv_categories .catcol ul li.cat-item { background:transparent url(images/bullet-grey.png) no-repeat scroll 7px 11px; color:#0076be; }
+div#adv_categories .catcol ul li.cat-item:hover {background-color:#f0f8fe; color:#0076be; background-image:none; }
+div#adv_categories .catcol ul li.cat-item:hover a { color:#0076be; background:#f0f8fe !important;  }
+div#adv_categories .catcol ul li.cat-item a:hover { background-color:#f0f8fe; color:#0076be;}
+div#adv_categories .first { border-left:none;}
+
+
+/* pagination */
+.paging { background:#f6f6f6; }
+.pages span { background:#fff;text-shadow:0 1px 0 #FFFFFF; }
+.pages span.total { background:none;  }
+.pages span.current { background:#8a8a8a; color:#fff; }
+.pages a {  color:#4f4f4f; background:#fff;}
+
+
+
+
+/* button styles */
+.orangebutton{background-color:#F26332; border-color:#BE3101; border-style:solid; border-width:1px; color:#FFF;}
+.orangebutton:hover{background-color:#F26332; border-color:#BE3101}
+.btn_orange{ background:#444d58  border:none; color:#FFF; text-decoration:none;  text-shadow:1px 1px 0 rgba(0, 0, 0, 0.25)}
+.btn_orange:hover, .btn_orange a:hover{ border:none; color:#FFF;  background:#64acd8; text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.25)}
+
+/*  Trying to get rid of button background
+.header_menu_res a.btn_orange { background:url(blue/b_post_ad.png) no-repeat left -5px; }
+*/
+.header_menu_res a:hover.btn_orange  { background-position:left -57px;  }
+
+/* top search button styles */
+#search-bar { background:#7598C9; }
+.searchblock .form_search input#s { background:url(blue/i_search.png) no-repeat 5px 8px; }
+.btn-topsearch {background: transparent url(blue/b_go.png) no-repeat right top;}
+.selectBox-dropdown { background:#fff url(blue/i_categories.png) no-repeat 5px 8px; border:none; }
+.selectBox-dropdown:hover, .selectBox-dropdown:focus  { background:#f5fafc url(blue/i_categories.png) no-repeat 5px 8px; }
+/* category menu */
+.adv_categories ul li.active { margin:0 -7px 0 -8px; padding:4px 7px 4px 8px; color:#fff; background:#333;}
+.adv_categories .catcol ul li.maincat a { margin:0; padding:4px 0; color:#333; text-decoration:none;}
+
+/* content */
+.content_res .priceblockbig p.price { margin:0; padding:0; float:right; font:bold 18px/1.2em Arial, Helvetica, sans-serif; color:#333;}  
+.content_res .priceblockbig p.location span { font-weight:bold; color:#333;} 		
+.content_res .priceblocksmall p.price { margin:0; padding:0; float:right; font:bold 13px/1.2em Arial, Helvetica, sans-serif; color:#333;}	
+.content_res .stepsline div.l_ready { background:#333;}				  	
+.content_res .stepsline div.no_ready { border:1px solid #6d1414;}				
+.content_res .stepsline div.ni_ready { background:#333; border-top:1px solid #bd716d;}
+.content_left p.bigprice { color:#333; float:right; font-size:18px; font-weight:bold; line-height:1.2em; margin:0; padding:8px 0 0; }
+.content_res .can_chg_bg:hover { background-color: #EAF2FA; }
+
+/* sidebar refine search */
+.content_right ul.refine li input#amount, .content_right ul.refine li input#distance {color:#333; border:0; font-weight:bold;}
+.content_right .shadowblock { border:1px solid #cce5f6; background:url(blue/widgetbg.png) repeat-x left top; }
+
+.post-meta { color:#aeaeae; }
+.post-meta a:hover { color:#000; text-decoration:underline; }
+
+/* price tag */
+p.post-price {  color:#e45e0d; }
+.post-block .post-right h3, .post-block .post-right h3 a {color:#0076be; }
+.post-block .post-right h3 a:hover { color:#000; }
+
+.post-block:hover .post-left img { border:3px solid #333; }
+.post-block:hover { background:#f6f6f6; }
+
+/* footer */
+.footer_menu_res ul li a { color:#9b9b9b;}
+.footer_menu_res ul li a:hover {color:#333;  }
+.footer_main_res div.column h2, .footer_main_res div.shadowblock_out h2 { color:#477089; }
+
+.footer_menu {}	
+.footer_menu_res { border-top:1px solid #EFF7FB; background:url(blue/sepretor_hr.png) repeat-x left bottom; }
+.footer_main_res div.column p { margin:0; padding:0; font:normal 14px/1.8em Arial, Helvetica, sans-serif; color:#7c7c7c;} 
+.footer_main_res div.column p a { color:#7c7c7c;}		
+.footer_main_res div.column ul li, .footer_main_res div.shadowblock_out li { border-bottom:1px solid #ebebeb; }	
+.footer_main_res div.column ul li a, .footer_main_res div.shadowblock_out li a { color:#7c7c7c; text-decoration:none;}	
+.footer_main_res div.column ul li a:hover, .footer_main_res div.shadowblock_out li a:hover { color:#000; }
+.footer_main_res div.column { color:#7c7c7c;} 
+.dotted  { background:url(blue/sepretor_hr.png) repeat-x left bottom; display:table; }
+.footer_main_res p { color:#7c7c7c; }
+.footer .right a {color:#7c7c7c;}
+.footer .right a:hover { color:#333; }
+.footer_main_res div.column h2.dotted, .footer_main_res div.shadowblock_out h2 { background:none;  }

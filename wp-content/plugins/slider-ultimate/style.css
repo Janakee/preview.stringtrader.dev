@@ -1,0 +1,112 @@
+
+
+.content_res .shadowblockdir_large {
+    background: url(images/block_topbg.gif) repeat-x scroll center top #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px 6px 6px 6px;
+    height: 450px;
+    padding: 8px 15px 5px;
+	position:relative;
+}
+
+.content_res .slides_container {
+	height:315px;
+	overflow:hidden;
+}
+
+.content_res .shadowblockdir_large .slider_featured {
+	position:absolute;
+	z-index:900;
+	width:239px;
+	height:44px;
+	background:transparent url(images/slider_featured_listings.png) no-repeat;
+	right:-15px;
+	bottom:40px;
+}
+
+.content_res .slides_container, .content_res .pagination {
+	margin:20px;
+	width:866px;
+}
+
+.content_res .slide {
+	margin-bottom:20px;
+	height:315px;
+	width:866px;
+}
+
+.content_res .slide .slide_image {
+	float:left;
+	margin-right:20px;
+	border:3px solid #E5E5E5;
+	padding:5px;
+}
+
+.content_res .slide .slide_image a {
+	width:440px;
+	height:300px;
+	overflow:hidden;
+	display:block;
+	line-height:300px;
+	vertical-align:middle;
+}
+
+.content_res .slide .slide_image .img-main {
+	width:440px;
+	border:none;
+	padding:0;
+}
+
+.content_res .slide .slide_text {
+	float:left;
+	width:380px;
+}
+
+.content_res .slide .slide_text p.post-desc {
+	font-size:16px;
+	line-height:24px;
+	margin-bottom:5px;
+}
+
+.content_res .slide .slide_text div.price-wrap {
+	
+}
+
+.content_res .slide .slide_text h3 {
+	text-align:center;
+	font-size:24px;
+	font-weight:normal;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	border-bottom: 2px solid #E7E7E7;
+}
+
+.content_res .slide .slide_text h3  a {
+	text-decoration:none;
+}
+
+.content_res .slide .slide_text h3  a:hover {
+	text-decoration:underline;
+}
+
+.content_res .pagination li {
+	margin-right:10px;
+	position:relative;
+	float:left;
+}
+
+.content_res .pagination li.current img {
+	box-shadow:none;
+}
+
+.content_res .pagination li img.arrow {
+	position:absolute;
+	top:-11px;
+	left:32px;
+	display:none;
+	z-index:5;
+}
+
+.content_res .pagination li.current img.arrow {
+	display:block;
+}

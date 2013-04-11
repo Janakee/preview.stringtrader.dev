@@ -1,0 +1,76 @@
+/*
+Classipress Rated Author
+Current Version: 1.2
+Plugin Author: Julio Gallegos
+Author URL: http://myclassipro.com
+*/
+
+#cprate_wrapper {
+float:left;	
+}
+h3.cprate-header {
+position:relative;
+color: #0066FF; 
+width:100%; 
+border-bottom:1px solid #000; 		
+}
+#cprate_wrapper th span {
+font-size:11px; 
+font-style:italic;	
+}
+#cprate_wrapper .wide {
+width:240px;
+}
+#cprate_moderate {
+width:1200px !important;	
+}
+#cprate_moderate .widefat td {
+padding: 9px 5px !important;
+}
+#mod-on-error {
+clear: both;
+color: red;
+font-size: 16px;
+text-align: center;
+padding-bottom:5px;	
+}
+#cprate_sort_form input {
+margin-left:15px;	
+}
+#cprate_sorter {
+float:left;
+padding-bottom:15px;	
+}
+#cprate_showthis {
+float:right;
+}
+#cprate_showthis span, #cprate_sorter span {
+color:#03F;
+font-weight:bold;
+padding-left:6px;
+}
+.needs_mod {
+background-color:#FF0;	
+}
+.cprate_col1, .cprate_col3, .cprate_col6, .cprate_col7 {
+width:100px;
+}
+.cprate_col2, .cprate_col5 {
+width:190px;
+
+}
+.cprate_col4 {
+width:400px;
+}
+.cprate_error {
+color:red;
+font-style:italic;	
+}
+.action img {
+cursor:pointer;
+margin-right:15px;	
+}
+#reload_me {
+cursor:pointer;
+padding-left:20px;
+}
