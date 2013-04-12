@@ -36,11 +36,27 @@ if($app_version<='3.1.9'){	?>
         <div class="header_top">
 			
             <div class="header_top_res">
-<div class= "logotype">
-					String Trader
+            
+<!-- Steve created separate divs for logo, login and mobile button for positioning when  -->           
+ 	
+			            <div class="header_top_res">
+			            
+			 <div class= "login">
+					                <?php echo cp_login_head(); ?>
+			</div><!-- /login-->
+			      
+			            
+			    <div class= "logotype">
+				<A href="preview.stringtrader.com" style="text-decoration:none;" class="logotype">String Trader</A>
 			</div><!-- /logotype-->
-                <p>
-                <?php echo cp_login_head(); ?>
+			
+
+              <div class= "mobile_post_btn">
+		
+					 <a href="<?php echo CP_ADD_NEW_URL ?>" class="obtn btn_orange mobile_btn"><?php _e('Post an Ad', APP_TD) ?></a>
+			</div><!-- /mobile_post_btn-->
+
+
                 
 	<!-- Steve commenting out rss   <?php   
 	if($app_version<='3.1.9'){	?>
@@ -83,12 +99,13 @@ if($app_version<='3.1.9'){	?>
                             <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
                             <div class="description"><?php bloginfo('description'); ?></div>
 
-                        <?php } ?> -->
+                        <?php } ?> 
  
                        
 
                     </div><!-- /logo -->
-					
+	
+<!-- Steve commenting mobile button in logo div				
 					 <a href="<?php echo CP_ADD_NEW_URL ?>" class="obtn btn_orange mobile_btn"><?php _e('Post an Ad', APP_TD) ?></a>
 					
 					<?php   
@@ -100,7 +117,7 @@ if($app_version<='3.1.9'){	?>
                         <div class="adblock">
 
                             <?php appthemes_header_ad_468x60();?>
-
+-->
                         </div><!-- /adblock -->
 <!-- Steve commenting second adblock
                     <?php } ?>

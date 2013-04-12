@@ -116,7 +116,9 @@ p.red { color: #CC0000; }
 .container { margin:0; padding:0; width:100%; font:normal 12px/1.5em Arial, Helvetica, sans-serif; color:#4f4f4f; }
 
 /* header */
-.logotype {float: left;margin: 0px; font-family: 'Montserrat Subrayada', sans-serif;font-weight: 700;font-size: 30px;padding-top: 10px;color: #333333}
+.logotype {float:left; margin: 0px; font-family: 'Montserrat Subrayada', sans-serif;font-weight: 700;font-size: 30px;padding-top: 10px;color: #333333}
+.mobile_post_btn {float:right;}
+.login {float:right;}
 .header_top_res { margin:0 auto;padding:0px 0px 25px 0px; width:940px;text-align:right;}
 .header_top_res p { padding:0px 0 0px 0px; text-align:right;}
 .header_top_res p img.srvicon { margin:-4px 0; border:none; }
