@@ -219,7 +219,7 @@ if (!function_exists('cp_login_head')) {
 		<?php else : ?>
 		<?php //_e( 'Welcome,', APP_TD ); ?> <strong><?php// _e( 'visitor!', APP_TD ); ?>
 
-</strong> [ <a href="<?php echo appthemes_get_registration_url(); ?>"><?php _e( 'Register', APP_TD ); ?></a> | <a href="<?php echo wp_login_url(); ?>"><?php _e( 'Login', APP_TD ); ?></a> ]&nbsp;
+</strong> [ <a href="<?php echo appthemes_get_registration_url(); ?>"><?php _e( 'Sign Up', APP_TD ); ?></a> | <a href="<?php echo wp_login_url(); ?>"><?php _e( 'Login', APP_TD ); ?></a> ]&nbsp;
 		<?php endif;
 
 	}

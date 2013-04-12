@@ -1,4 +1,6 @@
-body { background:url(blue/headerbg.png) repeat-x left top !important; }
+/* Steve commenting out background image body 
+{ background:url(blue/headerbg.png) repeat-x left top !important; }
+*/
 /* main */
 h1.single, span.colour { color:#333;}
 div.bigright span { color:#333; font-weight: bold;} 
@@ -51,7 +53,7 @@ span.price_sm { color:#e45e0d}
 .header_main_res #logo h1 { color:#666666; font-size:38px; margin:0px; padding:0px; }
 .header_main_res #logo h1 a { color:#666666; text-decoration: none; margin:0px; padding:0px; }
 .header_main_res .description { color:#999999; font-family:Georgia,serif; font-size:14px; font-style:italic; }
-.header_menu { border-top:2px solid #eff7fb;  }
+.header_menu { }
 .cp_logo {height:55px; width:222px; margin-bottom:20px; margin-top:15px; background:transparent url(../images/cp_logo_black.png) no-repeat scroll 0 0}
 
 
@@ -119,9 +121,8 @@ div#adv_categories .first { border-left:none;}
 .btn_orange{ background:#444d58  border:none; color:#FFF; text-decoration:none;  text-shadow:1px 1px 0 rgba(0, 0, 0, 0.25)}
 .btn_orange:hover, .btn_orange a:hover{ border:none; color:#FFF;  background:#64acd8; text-shadow:-1px -1px 0 rgba(0, 0, 0, 0.25)}
 
-/*  Trying to get rid of button background
-.header_menu_res a.btn_orange { background:url(blue/b_post_ad.png) no-repeat left -5px; }
-*/
+.header_menu_res a.btn_orange { background-color: #6c7279 }
+
 .header_menu_res a:hover.btn_orange  { background-position:left -57px;  }
 
 /* top search button styles */
