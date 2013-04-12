@@ -57,7 +57,7 @@ span.price_sm { color:#e45e0d}
 
 /* main nav menu global styles*/
 .header_menu_res ul li.first { background:none;}
-.header_menu_res ul li a { color:#444d58; }
+.header_menu_res ul li a { color:#0e0e0e; }
 .header_menu_res ul li:hover a { color:#000; background: #fff;text-shadow:0 1px 0 #fff; }
 .header_menu_res ul li.sfHover a.sf-with-ul, .header_menu_res ul li.mega:hover { color:#000; background:#fff;text-shadow:0 1px 0 #fff; -moz-box-shadow:  0px -1px 3px #d5d5d5; -webkit-box-shadow:  0px -1px 3px #d5d5d5; box-shadow: 0px -2px 3px #d5d5d5;  }
 .header_menu_res ul li.mega:hover  a { background:#fff !important; }
@@ -165,7 +165,8 @@ p.post-price {  color:#e45e0d; }
 .footer_main_res div.column h2, .footer_main_res div.shadowblock_out h2 { color:#477089; }
 
 .footer_menu {}	
-.footer_menu_res { border-top:1px solid #EFF7FB; background:url(blue/sepretor_hr.png) repeat-x left bottom; }
+/*.footer_menu_res { border-top:1px solid #EFF7FB; background:url(blue/sepretor_hr.png) repeat-x left bottom; }*/
+.footer_menu_res {padding-top: 10px}
 .footer_main_res div.column p { margin:0; padding:0; font:normal 14px/1.8em Arial, Helvetica, sans-serif; color:#7c7c7c;} 
 .footer_main_res div.column p a { color:#7c7c7c;}		
 .footer_main_res div.column ul li, .footer_main_res div.shadowblock_out li { border-bottom:1px solid #ebebeb; }	
