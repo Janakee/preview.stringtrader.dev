@@ -9,7 +9,9 @@ if($app_version<='3.1.9'){	?>
 	<div class="content_botbg">
 
 		<div class="content_res">
-
+		
+<!-- Steve added a "slider_sc" div to not display slider on small screens --->
+<div class="slider_sc">
 <?php if (function_exists('tb_slider_ultimate')) tb_slider_ultimate(); ?>            
 <?php
 	/*if ( file_exists(STYLESHEETPATH . '/featured.php') )
@@ -17,6 +19,7 @@ if($app_version<='3.1.9'){	?>
 	else
 		include_once(TEMPLATEPATH . '/featured.php');*/
 ?>
+</div><!--/slider_sc-->
 
         <!-- left block -->
         <div class="content_left">

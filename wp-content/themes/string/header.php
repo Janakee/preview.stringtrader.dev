@@ -39,16 +39,19 @@ if($app_version<='3.1.9'){	?>
             
 <!-- Steve created separate divs for logo, login and mobile button for positioning when  -->           
  	
-			            <div class="header_top_res">
-			            
-			 <div class= "login">
+ 			 <div class= "login">
 					                <?php echo cp_login_head(); ?>
 			</div><!-- /login-->
-			      
+
 			            
 			    <div class= "logotype">
 				<A href="preview.stringtrader.com" style="text-decoration:none;" class="logotype">String Trader</A>
-			</div><!-- /logotype-->
+			</div><!-- /logotype-->		            
+			 
+	
+			      
+			            
+	
 			
 
               <div class= "mobile_post_btn">
@@ -78,62 +81,7 @@ if($app_version<='3.1.9'){	?>
         </div><!-- /header_top -->
 
 
-        <div class="header_main">
 
-            <div class="header_main_bg">
-
-                <div class="header_main_res">
-
-                    <div id="logo">
-                    
- <!-- Steve commenting out logo   <?php  if ( get_option('cp_use_logo') != 'no' ) { ?>
-
-                            <?php if ( get_option('cp_logo') ) { ?>
-                                <a href="<?php echo home_url(); ?>"><img src="<?php echo get_option('cp_logo'); ?>" alt="<?php bloginfo('name'); ?>" class="header-logo" /></a>
-                            <?php } else { ?>
-                                <a href="<?php echo home_url(); ?>"><div class="cp_logo"></div></a>
-                            <?php } ?>
-
-                        <?php } else { ?>
-
-                            <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-                            <div class="description"><?php bloginfo('description'); ?></div>
-
-                        <?php } ?> 
- 
-                       
-
-                    </div><!-- /logo -->
-	
-<!-- Steve commenting mobile button in logo div				
-					 <a href="<?php echo CP_ADD_NEW_URL ?>" class="obtn btn_orange mobile_btn"><?php _e('Post an Ad', APP_TD) ?></a>
-					
-					<?php   
-					global $app_version;
-					if($app_version<='3.2'){	?>
-					 <?php if ( get_option('cp_adcode_468x60_enable') == 'yes' ) { ?>
-
-            <!-- Steve commenting out adblock  
-                        <div class="adblock">
-
-                            <?php appthemes_header_ad_468x60();?>
--->
-                        </div><!-- /adblock -->
-<!-- Steve commenting second adblock
-                    <?php } ?>
-					<?php }else{ ?>
-					<div class="adblock">
-					<?php appthemes_advertise_header(); ?>
-					</div><!-- /adblock -->
-					<?php } ?>
-
-                    <div class="clr"></div>
-
-                </div><!-- /header_main_res -->
-
-            </div><!-- /header_main_bg -->
-
-        </div><!-- /header_main -->
 
 
         <div class="header_menu">
