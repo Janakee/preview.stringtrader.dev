@@ -17,8 +17,8 @@
 
 			<div class="searchblock">
 
-				<form action="<?php echo site_url('/'); ?>" method="get" id="searchform" class="form_search">
-
+				<form action="<?php echo site_url('/'); ?>" method="get" id="searchform_sc" class="form_search">
+<div class="form_search_sc"></div>
 					<div class="searchfield">
 
 						<input name="s" type="text" id="s" tabindex="1" class="editbox_search" style="width:<?php echo get_option('cp_search_field_width'); ?>" <?php if ( get_search_query() ) { echo 'value="'.trim(strip_tags(esc_attr(get_search_query()))).'"'; } else { ?> value="<?php _e('What are you looking for?',APP_TD); ?>" onFocus="if (this.value == '<?php _e('What are you looking for?',APP_TD); ?>') {this.value = '';}" onBlur="if (this.value == '') {this.value = '<?php _e('What are you looking for?',APP_TD); ?>';}" <?php } ?> />
