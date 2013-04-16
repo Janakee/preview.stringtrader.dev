@@ -2249,8 +2249,8 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size('sidebar-thumbnail', 50, 50, true); // sidebar blog thumbnail size, box crop mode
 
 	// create special sizes for the ads
-	add_image_size('ad-thumb', 75, 75, true);
-	add_image_size('ad-small', 100, 100, true);
+	add_image_size('ad-thumb', 100, 100, true);
+	add_image_size('ad-small', 150, 150, true);
 	add_image_size('ad-medium', 250, 250, true);
 	//add_image_size('ad-large', 500, 500);
 }

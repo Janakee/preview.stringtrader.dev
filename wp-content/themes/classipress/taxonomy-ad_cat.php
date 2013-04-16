@@ -21,7 +21,7 @@
                 <div class="shadowblock">
 
                   <div id="catrss"><a href="<?php echo get_term_feed_link($term->term_id, $taxonomy); ?>"><img src="<?php bloginfo('template_url'); ?>/images/rss.png" width="16" height="16" alt="<?php echo $term->name; ?> <?php _e( 'RSS Feed', APP_TD ); ?>" title="<?php echo $term->name; ?> <?php _e( 'RSS Feed', APP_TD ); ?>" /></a></div>
-                  <h1 class="single dotted"><?php _e( 'Listings for', APP_TD ); ?> <?php echo $term->name; ?> (<?php echo $wp_query->found_posts; ?>)</h1>
+                  <h1 class="single dotted"><?php _e( 'Listings for', APP_TD ); ?> <?php echo $term->name; ?> </h1>
 
 				  <p><?php echo $term->description; ?></p>
 

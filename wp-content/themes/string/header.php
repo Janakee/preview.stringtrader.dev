@@ -45,10 +45,20 @@ if($app_version<='3.1.9'){	?>
 
 			            
 			    <div class= "logotype">
-				<A href="preview.stringtrader.com" style="text-decoration:none;" class="logotype">String Trader</A>
-			</div><!-- /logotype-->		            
-			 
-	             
+				<A href="http://preview.stringtrader.dev/" style="text-decoration:none;" class="logotype">String Trader</A>
+			</div><!-- /logotype-->		
+			            
+			 <div class= "beta">
+				(beta)
+			</div><!-- /beta-->	
+	
+              <div class= "mobile_post_btn">
+		
+					 <a href="<?php echo CP_ADD_NEW_URL ?>" class="obtn btn_orange mobile_btn"><?php _e('Post an Ad', APP_TD) ?></a>
+			</div><!-- /mobile_post_btn-->
+
+
+                
 	<!-- Steve commenting out rss   <?php   
 	if($app_version<='3.1.9'){	?>
 	  <a href="<?php if (get_option('cp_feedburner_url')) echo get_option('cp_feedburner_url'); else echo get_bloginfo_rss('rss2_url').'?post_type='.APP_POST_TYPE; ?>" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/icon_rss.gif" width="16" height="16" alt="rss" class="srvicon" /></a>
@@ -60,55 +70,26 @@ if($app_version<='3.1.9'){	?>
 										&nbsp;|&nbsp;<a href="http://twitter.com/<?php echo get_option('cp_twitter_username'); ?>" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/icon_twitter.gif" width="16" height="16" alt="tw" class="srvicon" /></a>
 								<?php endif; ?>  -->
 	
-										
- 
+								
+								
+                </p>
 
             </div><!-- /header_top_res -->
-<!--Steve creating search form at top-->
 
-	<div id="search-bar">
-
-		<div class="searchblock_out">
-
-			<div class="searchblock">
-
-				<form action="<?php echo site_url('/'); ?>" method="get" id="searchform_sc" class="form_search">
-<div class="form_search_sc"></div>
-					<div class="searchfield">
-
-						<input name="s" type="text" id="s" tabindex="1" class="editbox_search" style="width:<?php echo get_option('cp_search_field_width'); ?>" <?php if ( get_search_query() ) { echo 'value="'.trim(strip_tags(esc_attr(get_search_query()))).'"'; } else { ?> value="<?php _e('What are you looking for?',APP_TD); ?>" onFocus="if (this.value == '<?php _e('What are you looking for?',APP_TD); ?>') {this.value = '';}" onBlur="if (this.value == '') {this.value = '<?php _e('What are you looking for?',APP_TD); ?>';}" <?php } ?> />
-
-					</div> <!-- /searchfield -->
-
-
-					
-						<button class="btn-topsearch" type="submit" tabindex="3" title="<?php _e('Search Ads', APP_TD); ?>" id="go" value="search" name="sa"><?php _e('Search Ads', APP_TD); ?></button>
-
-					</div>
-
-				</form>
-
-			</div> <!-- /searchblock -->
-
-		</div> <!-- /searchblock_out -->
-
-	</div> <!-- /search-bar -->
         </div><!-- /header_top -->
 
 
 
+
+
         <div class="header_menu">
-	
 
             <div class="header_menu_res">
-		
 
                 <a href="<?php echo CP_ADD_NEW_URL ?>" class="obtn btn_orange"><?php _e('Post an Ad', APP_TD) ?></a>
 			
 	     <?php   
-if($app_version<='3.1.9'){	?>	
-
-
+if($app_version<='3.1.9'){	?>		
                 <ul id="nav"> 
                 
                     <li class="<?php if (is_home()) echo 'page_item current_page_item'; ?>"><a href="<?php echo get_option('home')?>"><?php _e('Home',APP_TD); ?></a></li>
@@ -129,23 +110,18 @@ if($app_version<='3.1.9'){	?>
 				<?php do_action('su_show_state_menu'); ?>
 				<?php do_action('cu_show_city_menu'); ?>
 				 
-	
-
+				<!--Steve adding search div-->
+				
                 <div class="clr"></div>
 
     
             </div><!-- /header_menu_res -->
 
         </div><!-- /header_menu -->
- <div class= "mobile_post_btn">
-		
-					 <a href="<?php echo CP_ADD_NEW_URL ?>" class="obtn btn_orange mobile_btn"><?php _e('Post an Ad', APP_TD) ?></a>
-			</div><!-- /mobile_post_btn-->
-
 
     </div><!-- /header -->
 			 
-<!-- Steve commenting out stock search bar			 
+			 
  <?php   
 if($app_version<='3.1.9'){	?>
 <?php include_once( STYLESHEETPATH . '/includes/theme-searchbar.php' ); ?>

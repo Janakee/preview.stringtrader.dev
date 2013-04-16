@@ -1,4 +1,4 @@
- <?php   
+	 <?php   
 global $app_version;
 if($app_version<='3.1.9'){	?>
 <?php get_header(); ?>
@@ -10,7 +10,7 @@ if($app_version<='3.1.9'){	?>
 
 		<div class="content_res">
 		
-<!-- Steve added a "slider_sc" div to not display slider on small screens --->
+<!-- Steve added a "slider_sc" div to not display slider on small screens -->
 <div class="slider_sc">
 <?php if (function_exists('tb_slider_ultimate')) tb_slider_ultimate(); ?>            
 <?php
@@ -72,9 +72,8 @@ if($app_version<='3.1.9'){	?>
         <div class="tabcontrol">
 
             <ul class="tabnavig">
-              <li><a href="#block1"><span class="big"><?php _e('Just Listed',APP_TD)?></span></a></li>
-              <li><a href="#block2"><span class="big"><?php _e('Most Popular',APP_TD)?></span></a></li>
-              <li><a href="#block3"><span class="big"><?php _e('Random',APP_TD)?></span></a></li>
+              <li><a href="#block1"><span class="big"><?php _e('RECENT LISTINGS',APP_TD)?></span></a></li>
+
             </ul>
             
 	    <?php remove_action( 'appthemes_after_endwhile', 'cp_do_pagination' ); ?>
@@ -92,7 +91,7 @@ if($app_version<='3.1.9'){	?>
 
               <div class="clr"></div>
 
-              <div class="undertab"><span class="big"><?php _e('Classified Ads',APP_TD) ?> / <strong><span class="colour"><?php _e('Just Listed',APP_TD) ?></span></strong></span></div>
+              <div class="undertab"><span class="big"><?php/* _e('Classified Ads',APP_TD) ?> / <strong><span class="colour"><?php _e('Just Listed',APP_TD)*/ ?></span></strong></span></div>
 
                 <?php
                     // show all ads but make sure the sticky featured ads don't show up first

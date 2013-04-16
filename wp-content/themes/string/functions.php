@@ -73,3 +73,6 @@ define( 'APP_TD', 'appthemes' );
 if ( !is_admin() ) {
     add_action('wp_print_styles', 'add_classisky_responsive_js', 20);
 }
+
+/* adding larger thumbnails as suggested here http://forums.appthemes.com/classipress-general-discussion/how-change-image-size-thumbnail-39939/ */
+

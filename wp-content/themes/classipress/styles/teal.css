@@ -40,8 +40,8 @@ background-image: linear-gradient(to top left, #99CCFF 0%, #7598C9 100%);
 .adv_categories .catcol ul li.maincat a { margin:0; padding:4px 0; color:#186c95; text-decoration:none;}
 
 /* top search button styles */
-.btn-topsearch {	background: transparent url("../images/btn_searchBar_blue.png") no-repeat right top;}
-.btn-topsearch_sc {	background: transparent url("../images/btn_searchBar_teal.png") no-repeat right top;}	
+.btn-topsearch {	background: transparent url("../images/btn_searchBar_teal.png") no-repeat right top;}
+	
 /* content */
 .content_res .priceblockbig p.price { margin:0; padding:0; float:right; font:bold 18px/1.2em Arial, Helvetica, sans-serif; color:#186c95;}
 .content_res .priceblockbig p.location span { font-weight:bold; color:#186c95;}
