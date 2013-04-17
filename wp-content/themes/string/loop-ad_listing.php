@@ -49,7 +49,7 @@
                     
                     <?php appthemes_before_post_content(); ?>
         
-                    <p class="post-desc"><?php if($app_version<='3.1.9'){ $tcontent = strip_tags( get_the_content() ); if ( mb_strlen( $tcontent ) >= 165 ) echo mb_substr( $tcontent, 0, 165 ).'...'; else echo $tcontent; }else{ echo cp_get_content_preview( 160 ); } ?></p>
+                    <p class="post-desc"><?php if($app_version<='3.1.9'){ $tcontent = strip_tags( get_the_content() ); if ( mb_strlen( $tcontent ) >= 165 ) echo mb_substr( $tcontent, 0, 165 ).'...'; else echo $tcontent; }else{ echo cp_get_content_preview( 260 ); } ?></p>
                     
                     <?php appthemes_after_post_content(); ?>
                     

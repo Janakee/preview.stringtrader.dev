@@ -426,7 +426,7 @@ if ( !function_exists('cp_ad_loop_thumbnail') ) :
 		if ( $image_id > 0 ) {
 
 			// get 75x75 v3.0.5+ image size
-			$adthumbarray = wp_get_attachment_image( $image_id, 'ad-thumb' );
+			$adthumbarray = wp_get_attachment_image( $image_id, 'ad-small' );
 
 			// grab the large image for onhover preview
 			$adlargearray = wp_get_attachment_image_src( $image_id, 'large' );

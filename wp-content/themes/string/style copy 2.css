@@ -82,7 +82,7 @@ p.red { color: #CC0000; }
 /* button styles */
 .orangebutton{ font-size:16px; padding:4px; width:157px}
 .orangebutton:hover{ }
-.btn_orange{ background: #6b7178; text-decoration:none; margin:0; padding:5px 10px; -khtml-border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
+.btn_orange{ text-decoration:none; margin:0; padding:5px 10px; -khtml-border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
 .btn_orange:hover, .btn_orange a:hover{cursor:pointer; text-decoration:none; }
 
 .mobile_btn { display:none; float:right;background-color: #6C7279 }
@@ -273,7 +273,7 @@ background:url(images/i_sold.png) no-repeat left top; z-index:9; }
 .content_res .attachment-medium, .content_res .attachment-thumbnail {float:left;  /*margin:0 12px 0 0;  */}
 .content_res img.attachment-medium, .content_res img.attachment-thumbnail,
 .content_res img.attachment-ad-thumb, .content_res img.attachment-ad-small { border:2px solid #e5e5e5; padding:5px; background-color:#fff;  -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;}
-.content_res img.attachment-ad-thumb { max-width: 80px; max-height: 80px }
+.content_res img.attachment-ad-thumb { max-width: 75px; max-height: 75px;}
 .content_res .noresults {padding:20px;}
 
 /* main nav menu global styles  */
@@ -462,8 +462,8 @@ background:url(images/i_sold.png) no-repeat left top;  }
 .content_right ul.side-comments li:hover, .content_right ul.pop-blog li:hover  { background:#f0f8fe !important; }
 
 
-.post-left {float:left;padding-right:15px; width:15%; }
-.post-left img { height:auto; max-width:none; }
+.post-left {float:left;padding-right:15px;}
+.post-left img { width:100%; height:auto; max-width:none; }
 /*.post-left a.preview img:hover {opacity:0.6;}*/
 .post-block .post-right {float:right;max-width:462px;min-width:380px;}
 .post-block .post-right-no-img {float:right;width:100%;}
@@ -473,7 +473,7 @@ background:url(images/i_sold.png) no-repeat left top;  }
 .post-block .post-right h3 a, .post-block .post-right-no-img h3 a { text-decoration: none; }
 .post-block .post-right h3 a:hover, .post-block .post-right-no-img h3 a:hover { text-decoration: underline; }
 .post-block .post-right-no-img p.post-meta {color:#AFAFAF;font-size:11px;margin:0;padding:4px 0;text-shadow:0 1px 0 #FFFFFF;border-bottom:1px dotted #BDBDBD;}
-.post-block .post-right span.owner , .post-block .post-right-no-img span.owner {padding: 0 5px;display: none}
+.post-block .post-right span.owner , .post-block .post-right-no-img span.owner {padding: 0 5px;}
 .post-block .post-right span.owner img.avatar, .post-block .post-right-no-img span.owner img.avatar {padding:0 7px 0 0;margin-bottom:-3px;}
 .post-block .post-right p.post-desc, .post-block .post-right-no-img p.post-desc { margin:0; padding:6px 0;}
 .post-block .post-right p.stats, .post-block .post-right-no-img p.stats {clear:both; padding:0; float:right;font-size:11px;color:#AFAFAF;}
@@ -506,10 +506,10 @@ a.post-gallery img:hover {border:1px solid #AFAFAF}
 span.user {background:url("images/user-silhouette.png") no-repeat scroll 3px 0 transparent;}
 span.user a {padding:0 6px 0 24px;}
 
-span.owner {background:url("images/user-silhouette.png") no-repeat scroll 3px -2px transparent;}
-span.owner a {display: none}
-span.folder {background:url("images/folder-open.png") no-repeat scroll 0 0 transparent;line-height:16px;display:inline-block;}
-span.folder a {display: none}
+span.owner {background:url("images/user-silhouette.png") no-repeat scroll 3px -2px transparent;display: none;}
+span.owner a {padding:0 6px 0 14px;}
+span.folder {background:url("images/folder-open.png") no-repeat scroll 0 0 transparent;line-height:16px;display:inline-block;display: none;}
+span.folder a {padding:0 6px 0 22px;}
 span.folderb {background:url("images/folder-open.png") no-repeat scroll 5px 0 transparent; padding-left: 28px;}
 span.folderb a {padding:0 2px;}
 span.clock {background:url("images/clock.png") no-repeat scroll 3px -1px transparent;line-height:16px;display:inline-block;}
@@ -1318,7 +1318,6 @@ table#memberships th, table#memberships tr, table#memberships td { padding:5px; 
 .header_top_res p { text-align:center; }
 
 .post-left { padding:0; } 
-.post-block .full {width:80%;}
 .adblock { width:100%; text-align:center; margin-bottom:20px; }
 .adblock img { width:90%; }
 
@@ -1486,8 +1485,6 @@ table#memberships th, table#memberships tr, table#memberships td { padding:5px; 
 .adblock { width:100%; text-align:center; margin-bottom:20px; }
 .adblock img { width:90%; height:auto; }
 .post-left { padding:0; } 
-.post-left img { width: 100%; height:auto; max-width:none; }
-.post-block .full {width:70%;}
 .header_menu_res .obtn { display:none; }
 
 

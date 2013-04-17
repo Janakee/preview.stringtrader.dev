@@ -39,7 +39,7 @@ function cp_ad_loop_meta() {
   if ( $post->post_type == 'page' ) return;
 ?>	
     <p class="post-meta">
-        <span class="folder"><?php if ( $post->post_type == 'post' ) the_category(', '); else echo get_the_term_list( $post->ID, APP_TAX_CAT, '', ', ', '' ); ?></span> | <span class="owner"><?php if ( get_option('cp_ad_gravatar_thumb') == 'yes' ) appthemes_get_profile_pic( get_the_author_meta('ID'), get_the_author_meta('user_email'), 16 ) ?><?php the_author_posts_link(); ?></span> | <span class="clock"><span><?php echo appthemes_date_posted($post->post_date); ?></span></span>
+        <span class="folder"><?php if ( $post->post_type == 'post' ) the_category(', '); else echo get_the_term_list( $post->ID, APP_TAX_CAT, '', ', ', '' ); ?></span>  <span class="owner"><?php if ( get_option('cp_ad_gravatar_thumb') == 'yes' ) appthemes_get_profile_pic( get_the_author_meta('ID'), get_the_author_meta('user_email'), 16 ) ?><?php the_author_posts_link(); ?></span> <span class="clock"><span><?php echo appthemes_date_posted($post->post_date); ?></span></span>
     </p>
 <?php
 }
@@ -131,7 +131,7 @@ function cp_blog_post_meta() {
 	if ( is_page() ) return; // don't do post-meta on pages
 	global $post;
 ?>		
-	<p class="meta dotted"><span class="user"><?php the_author_posts_link(); ?></span> | <span class="folderb"><?php the_category(', ') ?></span> | <span class="clock"><span><?php echo appthemes_date_posted( $post->post_date ); ?></span></span></p>
+	<p class="meta dotted"><span class="user"><?php the_author_posts_link(); ?></span><span class="folderb"><?php the_category(', ') ?></span>  <span class="clock"><span><?php echo appthemes_date_posted( $post->post_date ); ?></span></span></p>
 <?php
 }
 add_action('appthemes_after_blog_post_title', 'cp_blog_post_meta');

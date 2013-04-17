@@ -82,7 +82,7 @@ p.red { color: #CC0000; }
 /* button styles */
 .orangebutton{ font-size:16px; padding:4px; width:157px}
 .orangebutton:hover{ }
-.btn_orange{ background: #6b7178; text-decoration:none; margin:0; padding:5px 10px; -khtml-border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
+.btn_orange{ text-decoration:none; margin:0; padding:5px 10px; -khtml-border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
 .btn_orange:hover, .btn_orange a:hover{cursor:pointer; text-decoration:none; }
 
 .mobile_btn { display:none; float:right;background-color: #6C7279 }
@@ -366,13 +366,13 @@ select#scat.searchbar option.level-0 {padding:0px; font-weight:normal;}
 .searchblock .form_search input#s:focus{background-color:#f5fafc;border:none;}
 .searchblock .form_search input#where{width:165px;margin-bottom:7px; border:1px solid #BBB; color:#4F4F4F; padding:11px; background: url("images/editbox_bg.gif") repeat-x scroll center top #FFFFFF;-khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}
 #searchform .searchfield {float:left; margin-right:5px;white-space: nowrap;}
-#searchform .searchbutcat {float:left ; width:365px;}
+#searchform .searchbutcat {float:left ; width:250px;}
 
 *+html .searchblock { width:98%; }
 *+html #searchform .searchbutcat { float:left; position:relative;  } 
 *+html .btn-topsearch { position:absolute; right:0; top:0; }
 *+html .selectBox-dropdown  { width:100%; }
-.btn-topsearch { position:absolute \ ;} 
+.btn-topsearch {float: left;} 
 
 
 .searchblock select#scat.postform{margin-bottom:7px; border:1px solid #BBB; min-height:15px; width:155px; padding:11px;background: url("images/editbox_bg.gif") repeat-x scroll center top;}
@@ -389,7 +389,7 @@ select#scat.searchbar option.level-0 {padding:0px; font-weight:normal;}
 ul.ui-autocomplete, .ui-menu{z-index:9999;}
 
 /* search bar button styles */
-.btn-topsearch {float:right; width:56px;padding: 0; margin:0px 0 0px 10px;font-size: 11px; text-align: center; height:34px;outline: none;display: inline-block;cursor:pointer;text-decoration:none;text-indent:-9999px;border:none;-khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; margin:1px 0 1px 10px\9;}
+.btn-topsearch { float:right; width:56px;padding: 0; font-size: 11px; text-align: center; height:34px;outline: none;display: inline-block;cursor:pointer;text-decoration:none;text-indent:-9999px;border:none;-khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; margin:1px 0 1px 10px\9;}
 
 .btn-topsearch:hover{ background-position: bottom;} /* extra class used for IE */
 .btn-topsearch:focus { }  /* extra class used for IE */
