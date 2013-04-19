@@ -19,6 +19,7 @@
 					<?php do_action( 'appthemes_notices' ); ?>
 
 					<p><?php _e( 'Please complete the fields below to login to your account.', APP_TD ); ?></p>
+					<p><?php _e( 'To post an ad or to respond to an ad, you must register and login.', APP_TD ); ?></p>
 
 					<div class="left-box">
 

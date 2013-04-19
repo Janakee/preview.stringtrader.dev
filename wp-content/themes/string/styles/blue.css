@@ -179,13 +179,13 @@ p.post-price {  color:#e45e0d; }
 .post-block:hover { background:#f6f6f6; }
 
 /* footer */
-.footer_menu_res ul li a { color:#2c323a;}
+.footer_menu_res ul li a { color:#484d54;}
 .footer_menu_res ul li a:hover {color:#333;  }
 .footer_main_res div.column h2, .footer_main_res div.shadowblock_out h2 { color:#477089; }
 
 .footer_menu {}	
 /*.footer_menu_res { border-top:1px solid #EFF7FB; background:url(blue/sepretor_hr.png) repeat-x left bottom; }*/
-.footer_menu_res {padding-top: 10px}
+.footer_menu_res {padding-top: 2px}
 .footer_main_res div.column p { margin:0; padding:0; font:normal 14px/1.8em Arial, Helvetica, sans-serif; color:#7c7c7c;} 
 .footer_main_res div.column p a { color:#7c7c7c;}		
 .footer_main_res div.column ul li, .footer_main_res div.shadowblock_out li { border-bottom:1px solid #ebebeb; }	

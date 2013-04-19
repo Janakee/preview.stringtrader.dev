@@ -1,0 +1,33 @@
+table.welcomepopup_useroptions {
+	width: 100%;
+	border-collapse: collapse;
+}
+table.welcomepopup_useroptions em {
+	font-size: 11px;
+	color: #A0A0A0;
+}
+table.welcomepopup_useroptions td,
+table.welcomepopup_useroptions th {
+	padding: 5px 5px 5px 5px;
+	vertical-align: top;
+	border: 0px solid #C0C0C0;
+	text-align: left;
+}
+table.welcomepopup_useroptions th {
+	width: 180px;
+}
+table.welcomepopup_useroptions a{
+	color: #0080FF;
+	text-decoration: none;
+}
+table.welcomepopup_useroptions a:hover{
+	text-decoration: underline;
+}
+
+.welcomepopup_postbox .inside {overflow: hidden; height: 100%;}
+
+.column-welcomepopup { width: 30px;}
+.metabox-prefs img.welcomepopup_icon {display: none;}
+img.welcomepopup_icon {float: left; margin-top: -3px; margin-right: 5px;}
+
+#welcomepopup_progress {display: none; vertical-align: middle; margin-left: 10px;}

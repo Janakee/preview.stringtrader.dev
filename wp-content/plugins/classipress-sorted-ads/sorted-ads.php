@@ -115,7 +115,7 @@ function ads_sorts_dropdown()
 		}
 		</script>
 		<style type="text/css">
-		.ads_sorts { width:53%; display:table; padding:8px 10px; float:right; margin-bottom:-1px; margin-right:5px;
+		.ads_sorts { width:53%; display:table; padding:2px 10px; float:right; margin-bottom:-1px; margin-right:5px;
 		-webkit-border-radius: 5px 5px 0 0; -moz-border-radius: 5px 5px 0 0;
 		border-radius: 5px 5px 0 0; border:1px solid #BBBBBB; }
 		.ads_sorts form { float:right; } 

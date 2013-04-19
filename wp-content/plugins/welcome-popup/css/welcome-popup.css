@@ -1,0 +1,352 @@
+#welcomepopup_overlay {
+	position: fixed;
+	z-index: 1000004;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+#welcomepopup_window {
+	font-size: 13px;
+	font-family: arial, verdana;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	position: fixed;
+	z-index: 1000005;
+	visibility: hidden;
+	text-align: left;
+	top: 50%;
+	left: 50%;
+	border: 1px solid #AAA;
+	-moz-box-shadow: rgba(32,32,32,1) 0 4px 30px;
+	-o-box-shadow: rgba(32,32,32,1) 0 4px 30px;
+	-webkit-box-shadow: rgba(32,32,32,1) 0 4px 30px;
+	-khtml-box-shadow: rgba(32,32,32,1) 0 4px 30px;
+	box-shadow: rgba(32,32,32,1) 0 4px 30px;
+}
+
+#welcomepopup_close {
+	position: absolute; 
+	top: -15px; 
+	right: -15px; 
+	cursor: pointer; 
+	width: 30px; 
+	height: 30px; 
+	background: transparent url(../images/close.png) 0 0 no-repeat;
+}
+
+.welcomepopup_box {
+	position: relative;
+	overflow: hidden;
+}
+
+#welcomepopup_delay {
+	position: absolute;
+	bottom: 3px;
+	right: 5px;
+	font-size: 11px;
+	color: #808080;
+}
+
+#welcomepopup_content {
+	clear: both;
+	overflow: auto;
+	text-align: left;
+	line-height: 1.4em;
+	padding: 15px;
+	overflow: hidden;
+}
+
+#welcomepopup_content p {
+	padding: 0px 0px 5px 0px;
+}
+
+#welcomepopup_areas {
+	margin-top: 10px;
+	overflow: hidden;
+	height: 100%;
+}
+
+.welcomepopup_area {
+	float: left;
+	overflow: hidden;
+	height: 100%;
+}
+
+div.welcomepopup_widget input[type="text"], 
+div.welcomepopup_widget input[type="password"], 
+div.welcomepopup_widget input[type="email"], 
+div.welcomepopup_widget input[type="url"], 
+div.welcomepopup_widget input[type="number"], 
+div.welcomepopup_widget textarea,
+div.welcomepopup_widget #s {
+	font-size: 13px !important;
+	font-family: arial, verdana !important;
+	width: 100%;
+	border: 1px solid transparent;
+	margin: 0px;
+	padding: 4px 4px;
+	color: #333;
+	background: #FFF;
+	background: rgba(255, 255, 255, 0.9);
+	outline: none;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	line-height: normal !important;
+	max-width: 100%;
+}
+div.welcomepopup_widget input[type="text"], 
+div.welcomepopup_widget input[type="password"], 
+div.welcomepopup_widget input[type="email"], 
+div.welcomepopup_widget input[type="url"], 
+div.welcomepopup_widget input[type="number"], 
+div.welcomepopup_widget textarea,
+div.welcomepopup_widget #s {
+	height: auto !important;
+}
+div.welcomepopup_widget input[type="button"],
+div.welcomepopup_widget input[type="submit"], 
+div.welcomepopup_widget input[type="reset"],
+div.welcomepopup_widget #searchsubmit {
+	display: inline-block;
+	padding: 4px 15px !important;
+	margin: 0px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #222;
+	background-color: #E1E1E1;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #EBEBEB, #E1E1E1);
+	background-image: -ms-linear-gradient(top, #EBEBEB, #E1E1E1);
+	background-image: -webkit-linear-gradient(top, #EBEBEB, #E1E1E1);
+	background-image: -o-linear-gradient(top, #EBEBEB, #E1E1E1);
+	background-image: linear-gradient(top, #EBEBEB, #E1E1E1);
+	box-shadow: inset 0 0 8px 2px #C6C6C6, 0 1px 0 0 #F4F4F4;
+	font-size: 13px !important;
+	font-family: arial, verdana !important;
+	height: auto !important;
+	line-height: normal !important;
+}
+div.welcomepopup_widget input[type="button"]:hover, 
+div.welcomepopup_widget input[type="submit"]:hover, 
+div.welcomepopup_widget input[type="reset"]:hover
+div.welcomepopup_widget #searchsubmit:hover,
+div.welcomepopup_widget input[type="button"]:active, 
+div.welcomepopup_widget input[type="submit"]:active, 
+div.welcomepopup_widget input[type="reset"]:active,
+div.welcomepopup_widget #searchsubmit:active {
+	text-decoration: none;
+	background-color: #EBEBEB;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #F9F9F9, #EBEBEB);
+	background-image: -ms-linear-gradient(top, #F9F9F9, #EBEBEB);
+	background-image: -webkit-linear-gradient(top, #F9F9F9, #EBEBEB);
+	background-image: -o-linear-gradient(top, #F9F9F9, #EBEBEB);
+	background-image: linear-gradient(top, #F9F9F9, #EBEBEB);
+	box-shadow: inset 0 0 8px 2px #C6C6C6, 0 1px 0 0 #F4F4F4;
+	border: 1px solid #CCC !important;
+}
+div.welcomepopup_widget {
+	font-size: 13px !important;
+	font-family: arial, verdana !important;
+	line-height: normal !important;
+	margin-bottom: 20px;
+	word-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	clear: both;
+	margin: 5px 5px 15px 5px;
+}
+h3.welcomepopup_widgettitle {
+	font-size: 13px !important;
+	font-family: arial, verdana !important;
+	line-height: normal !important;
+	font-weight: bold;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+	text-transform: uppercase;
+}
+div.welcomepopup_widget form {
+	margin-right: 10px;
+}
+div.welcomepopup_widget #s {
+	width: 100%;
+	margin-bottom: 10px;
+}
+div.welcomepopup_widget ul {
+	margin: 0;
+}
+div.welcomepopup_widget ul ul {
+	margin-left: 1em;
+}
+div.welcomepopup_widget ul li {
+	margin-left: 1.5em;
+	list-style: square;
+}
+div.welcomepopup_widget a {
+	text-decoration: none;
+}
+div.welcomepopup_widget a:hover,
+div.welcomepopup_widget a:focus,
+div.welcomepopup_widget a:active {
+	text-decoration: underline;
+}
+div.welcomepopup_widget .widget_search form {
+}
+div.welcomepopup_widget .widget_image img {
+	border: 0;
+	padding: 0;
+	height: auto;
+	max-width: 100%;
+}
+div.welcomepopup_widget #wp-calendar {
+	width: 100%;
+	text-align: center;
+}
+div.welcomepopup_widget #wp-calendar caption,
+div.welcomepopup_widget #wp-calendar td {
+	font-size: 13px;
+	font-family: arial, verdana;
+	line-height: normal;
+	text-align: center;
+	padding: 0px;
+}
+div.welcomepopup_widget #wp-calendar caption {
+	text-align: center;
+	padding: 5px 0 3px 0;
+	text-transform: uppercase;
+}
+div.welcomepopup_widget #wp-calendar th {
+	font-size: 13px;
+	font-family: arial, verdana;
+	line-height: normal;
+	text-align: center;
+	background: transparent;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	font-weight: bold;
+	padding: 0px;
+}
+div.welcomepopup_widget #wp-calendar tfoot td {
+	background: transparent;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	padding: 0px;
+}
+
+#welcomepopup_content a {
+	text-decoration: none;
+}
+#welcomepopup_content a:hover,
+#welcomepopup_content a:focus,
+#welcomepopup_content a:active {
+	text-decoration: underline;
+}
+
+
+/* White Font Scheme */
+div.welcomepopup_font_light {
+	color: #CCC !important;
+}
+.welcomepopup_font_light div.welcomepopup_infobox {
+	color: #CFA !important;
+}
+.welcomepopup_font_light div.welcomepopup_widget {
+	color: #CCC !important;
+}
+.welcomepopup_font_light h3.welcomepopup_widgettitle {
+	color: #CCC !important;
+}
+.welcomepopup_font_light div.welcomepopup_widget a {
+	color: #FFF !important;
+}
+.welcomepopup_font_light div.welcomepopup_widget a:hover,
+.welcomepopup_font_light div.welcomepopup_widget a:focus,
+.welcomepopup_font_light div.welcomepopup_widget a:active {
+	color: #F8F8F8 !important;
+}
+
+.welcomepopup_font_light div.welcomepopup_widget #wp-calendar {
+	color: #CCC !important;
+}
+.welcomepopup_font_light div.welcomepopup_widget #wp-calendar caption,
+.welcomepopup_font_light div.welcomepopup_widget #wp-calendar td {
+	color: #AAA !important;
+}
+.welcomepopup_font_light div.welcomepopup_widget #wp-calendar th {
+	color: #CCC !important;
+	border-color: #CCC;
+}
+.welcomepopup_font_light div.welcomepopup_widget #wp-calendar tfoot td {
+	border-color: #CCC;
+}
+.welcomepopup_font_light a {
+	color: #FFF !important;
+}
+.welcomepopup_font_light a:hover,
+.welcomepopup_font_light a:focus,
+.welcomepopup_font_light a:active {
+	color: #F8F8F8 !important;
+}
+
+
+/* Dark Font Scheme */
+
+div.welcomepopup_font_dark {
+	color: #444 !important;
+}
+.welcomepopup_font_dark div.welcomepopup_infobox {
+	color: #040 !important;
+}
+.welcomepopup_font_dark div.welcomepopup_widget {
+	color: #444 !important;
+}
+.welcomepopup_font_dark h3.welcomepopup_widgettitle {
+	color: #444 !important;
+}
+.welcomepopup_font_dark div.welcomepopup_widget a {
+	color: #457 !important;
+}
+.welcomepopup_font_dark div.welcomepopup_widget a:hover {
+	color: #446 !important;
+}
+.welcomepopup_font_dark div.welcomepopup_widget #wp-calendar {
+	color: #444 !important;
+}
+.welcomepopup_font_dark div.welcomepopup_widget #wp-calendar caption,
+.welcomepopup_font_dark div.welcomepopup_widget #wp-calendar td {
+	color: #666 !important;
+}
+.welcomepopup_font_dark div.welcomepopup_widget #wp-calendar th {
+	color: #444 !important;
+	border-color: #444 !important;
+}
+.welcomepopup_font_dark div.welcomepopup_widget #wp-calendar tfoot td {
+	border-color: #444 !important;
+}
+.welcomepopup_font_dark a {
+	color: #457 !important;
+}
+.welcomepopup_font_dark a:hover,
+.welcomepopup_font_dark a:focus,
+.welcomepopup_font_dark a:active {
+	color: #446 !important;
+}

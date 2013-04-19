@@ -77,7 +77,10 @@ jQuery(document).ready(function ($) {
                                                 <li><span><?php _e( 'URL:', APP_TD ); ?></span> <?php echo appthemes_make_clickable( get_post_meta( $post->ID, 'cp_adURL', true ) ); ?></li>
 
                                             <li><span><?php _e( 'Listed:', APP_TD ); ?></span> <?php the_time( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ) ) ?></li>
+                       <!--                     
                                             <li><span><?php _e( 'Expires:', APP_TD ); ?></span> <?php echo cp_timeleft( strtotime( get_post_meta( $post->ID, 'expires', true ) ) ); ?></li>
+                                            
+                       -->	
 
                                         <?php
                                         } else {
