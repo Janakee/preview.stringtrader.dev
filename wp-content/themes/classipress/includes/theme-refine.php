@@ -100,7 +100,7 @@ if ( !function_exists('cp_refine_search_builder') ) :
 
 		<div class="shadowblock">
 
-			<h2 class="dotted"><?php _e( 'Refine Results', APP_TD ); ?></h2>
+			<h2 class="dotted"><?php _e( 'FIlTERS', APP_TD ); ?></h2>
 
 			<ul class="refine">
 

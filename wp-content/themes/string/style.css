@@ -279,7 +279,7 @@ background:url(images/i_sold.png) no-repeat left top; z-index:9; }
 /* main nav menu global styles  */
 .header_menu_res ul, .header_menu_res ul ul, .header_menu_res ul ul ul { float:left; margin:0; padding:0; list-style:none;}
 .header_menu_res ul li.first { padding-left:0; background:none;}
-.header_menu_res ul li a {  text-decoration:none; font-weight:bold; font-family: 'Montserrat Subrayada',sans-serif;font-size: 18px;border-left:2px solid #d7d7d7;}
+.header_menu_res ul li a {  text-decoration:none; font-weight:bold; font-family: 'Montserrat Subrayada',sans-serif;font-size: 18px;border-left:0px solid #d7d7d7;}
 .header_menu_res ul li:hover a {  z-index:999;}
  .header_menu_res ul li.mega:hover { -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
 .header_menu_res ul li.sfHover a.sf-with-ul { z-index:999; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;}
@@ -857,7 +857,7 @@ label.marker {padding: 2px 0 0 5px; vertical-align: text-top; position: absolute
 /* single meta */
 .note {background-position:10px 10px;background-repeat:no-repeat;font-size:11px;height:auto;line-height:22px;margin:10px 0 20px;padding:10px 10px 10px 50px;position:relative;text-transform:uppercase;background-color:#FFFFE0;background-image:url(images/note.png);border:1px solid #E6DB55;color:#C69E00;-khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}
 
-.prdetails {padding:5px 0 20px 0;}
+.prdetails {display: none;padding:5px 0 20px 0;}
 .prdetails p.tags{background:transparent url(images/tag_orange.png) no-repeat scroll 0 6px; clear:both; padding:5px 0 5px 25px;min-height:20px;font-size:11px;}
 .prdetails p.tags a {font-size:12px; text-decoration:none; background:none repeat scroll 0 0 #efefef;border:1px solid #e3e3e3;padding:1px 5px;display:inline-table;margin:0 0 5px 0;text-shadow:0 1px 0 #fff;-khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}
 .prdetails p.tags a:hover{ background:none repeat scroll 0 0 #f0f8fe;border:1px solid #eee;text-shadow:1px 1px 0 #e3e3e3;-khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}

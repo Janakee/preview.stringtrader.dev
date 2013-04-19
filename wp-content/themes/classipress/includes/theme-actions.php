@@ -67,13 +67,14 @@ add_action( 'appthemes_after_blog_post_content', 'cp_do_loop_stats' );
  * @since 3.1.3
  */
 function cp_do_ad_ref_id() {
+	/* Steve hiding Ref ID
 	if ( !is_singular( APP_POST_TYPE ) ) return;
 	global $post;
 ?>		
 	<div class='note'><strong><?php _e( 'Ad Reference ID:', APP_TD ); ?></strong> <?php if ( get_post_meta( $post->ID, 'cp_sys_ad_conf_id', true ) ) echo get_post_meta( $post->ID, 'cp_sys_ad_conf_id', true ); else _e( 'N/A', APP_TD ); ?></div>
     <div class="dotted"></div>
     <div class="pad5"></div>
-<?php
+<?php */
 }
 add_action( 'appthemes_after_post_content', 'cp_do_ad_ref_id' );
 

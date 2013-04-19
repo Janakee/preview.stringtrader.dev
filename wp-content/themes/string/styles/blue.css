@@ -96,7 +96,7 @@ div#adv_categories .catcol { border-left:1px dotted #bdbdbd;   }
 div#adv_categories .catcol ul li ul {border-top:1px solid #e3e3e3;   }
 div#adv_categories .catcol ul li a { color:#545454; background:#f0f8fe;}
 div#adv_categories .catcol ul li.maincat { background: #fff; color:#0076be; border-top:1px solid #e3e3e3; }
-div#adv_categories .catcol ul li.maincat a { background: none; color:#0076be; }
+div#adv_categories .catcol ul li.maincat a { background: none; font-family: sans-serif; color:#0076be; }
 div#adv_categories .catcol ul li.maincat a:hover {background:none !important; }
 div#adv_categories .catcol ul li.cat-item { background:transparent url(images/bullet-grey.png) no-repeat scroll 7px 11px; color:#0076be; }
 div#adv_categories .catcol ul li.cat-item:hover {background-color:#f0f8fe; color:#0076be; background-image:none; }
