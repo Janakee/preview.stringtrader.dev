@@ -15,40 +15,63 @@
  *
  */
 
-global $userdata;
-global $wpdb;
+global $current_user, $wpdb;
+
+$error_msg = false;
 
 // check to see if there are images included
 // then valid the image extensions
 if ( !empty($_FILES['image']) ) 
     $error_msg = cp_validate_image();
 
+// check to see is ad pack specified for fixed price option
+if ( get_option('cp_price_scheme') == 'single' && get_option('cp_charge_ads') == 'yes' && !isset($_POST['ad_pack_id']) )
+		$error_msg[] = __( 'Error: no ad pack has been defined. Please contact the site administrator.', APP_TD );
+
+$error_msg = apply_filters( 'cp_listing_validate_fields', $error_msg );
+
 // images are valid
 if ( !$error_msg ) {
 	
 	// create the array that will hold all the post values
     $postvals = array();
+		        
+    // delete any images checked
+	if ( !empty( $_POST['image'] ) )
+		cp_delete_image();
 		
-    // upload the images and put into the new ad array
-    if ( !empty($_FILES['image']) ) 
-        $postvals = cp_process_new_image();
+	// update the image alt text
+	if ( !empty( $_POST['attachments'] ) )
+		cp_update_alt_text();
 		
-	// update attachment data
-	$postvals["attachment_count"] = count($_POST["attach_id"]);
-	for($i=0; $i<count($_POST["attach_id"]); $i++)
-	{
-		$postvals["attach_id_" . $i] = $_POST["attach_id"][$i];
-	}
+	// upload the images and put into the new ad array
+	if ( !empty($_FILES['image']) )
+			$postvals = cp_process_new_image();
+			
+	if ( !empty($_POST['app_attach_id']) )
+				$postvals['app_attach_id'] = $_POST['app_attach_id'];
 
-    // put all the posted form values into an array
-    foreach ( $_POST as $key => $value ) 
-        $postvals[$key] = appthemes_clean($value);
-
+	if ( !empty($_POST['app_attach_title']) )
+				$postvals['app_attach_title'] = $_POST['app_attach_title'];
+		
+	// put all the posted form values into an array
+	foreach ( $_POST as $key => $value )
+		if(!is_array($_POST[$key]))
+				$postvals[$key] = appthemes_clean($value);
+		else
+				$postvals[$key] = $value;
+					
+    
     // keep only numeric, commas or decimal values
     if ( !empty($_POST['cp_price']) ) {
         $postvals['cp_price'] = appthemes_clean_price($_POST['cp_price']);
 		$_POST['cp_price'] = $postvals['cp_price'];
 	}
+	
+	if ( isset($postvals['cp_currency']) && !empty($postvals['cp_currency']) )
+				$price_curr = $postvals['cp_currency'];
+		else
+				$price_curr = get_option('cp_curr_symbol');
     
     // keep only values and insert/strip commas if needed
     if ( !empty($_POST['tags_input']) ) {
@@ -80,53 +103,57 @@ if ( !$error_msg ) {
     }
 
 	//check if coupon code was entered, then check if coupon exists and is active
-	if ( isset($_POST['cp_coupon_code']) ) {
-		$coupon = cp_check_coupon_discount($_POST['cp_coupon_code']);
-		
-		//if $coupon has any results
-		if ( $coupon ) {
-			$postvals['cp_coupon_type'] = $coupon->coupon_discount_type;
-			$postvals['cp_coupon'] = $coupon->coupon_discount;
-		}
-		//if coupon is entered but not valid, display proper error.
-		elseif ( $_POST['cp_coupon_code'] != '' ) {
-			$postvals['cp_coupon_type'] = '';
-			$coupon_code_name = $_POST['cp_coupon_code'];
-			$postvals['cp_coupon'] = '<span class="error-coupon">'. __("Coupon code '$coupon_code_name' is not active or does not exist.", 'appthemes') . '</span>';
-		}
+		if ( isset($_POST['cp_coupon_code']) ) {
+				$coupon = cp_check_coupon_discount($_POST['cp_coupon_code']);
 
-	}
-	//if coupon was not entered, leave array unset
-	else {
-		$coupon = array();
-	}
+				//if $coupon has any results
+				if ( $coupon ) {
+						$postvals['cp_coupon_type'] = $coupon->coupon_discount_type;
+						$postvals['cp_coupon'] = $coupon->coupon_discount;
+				}
+				//if coupon is entered but not valid, display proper error.
+				elseif ( $_POST['cp_coupon_code'] != '' ) {
+						$postvals['cp_coupon_type'] = '';
+						$coupon_code_name = $_POST['cp_coupon_code'];
+						$postvals['cp_coupon'] = '<span class="error-coupon">' . sprintf( __( 'Coupon code "%s" is not active or does not exist.', APP_TD ), $coupon_code_name ) . '</span>';
+				}
+
+		}
+		//if coupon was not entered, leave array unset
+		else {
+				$coupon = array();
+		}
 	
     // calculate the total cost of the ad
 	if ( isset($postvals['cp_sys_feat_price']) )
-    	$postvals['cp_sys_total_ad_cost'] = cp_calc_ad_cost($_POST['cat'], $adpackid, $postvals['cp_sys_feat_price'], $_POST['cp_price'], $coupon);
-	else $postvals['cp_sys_total_ad_cost'] = cp_calc_ad_cost($_POST['cat'], $adpackid, 0, $_POST['cp_price'], $coupon);
+				$postvals['cp_sys_total_ad_cost'] = cp_calc_ad_cost($_POST['cat'], $adpackid, $postvals['cp_sys_feat_price'], $_POST['cp_price'], $coupon, $price_curr);
+		else
+				$postvals['cp_sys_total_ad_cost'] = cp_calc_ad_cost($_POST['cat'], $adpackid, 0, $_POST['cp_price'], $coupon, $price_curr);
 	
-	//UPDATE TOTAL BASED ON MEMBERSHIP
-	//check for current users active membership pack and that its not expired
-	if ( !empty($userdata->active_membership_pack) && appthemes_days_between_dates($current_user->membership_expires) > 0 ) {
-		$postvals['cp_membership_pack'] = get_pack($userdata->active_membership_pack);
-		//update the total cost based on the membership pack ID and current total cost
-		$postvals['cp_sys_total_ad_cost'] = get_pack_benefit($postvals['cp_membership_pack'], $postvals['cp_sys_total_ad_cost']);
-	}
-	
-	
-	
-    
-    // Debugging section
-    //echo '$_POST ATTACHMENT<br/>';
-    //print_r($postvals['attachment']);
+		//UPDATE TOTAL BASED ON MEMBERSHIP
+		//check for current users active membership pack and that its not expired
+		if ( !empty($current_user->active_membership_pack) && appthemes_days_between_dates($current_user->membership_expires) > 0 ) {
+				$postvals['cp_membership_pack'] = get_pack($current_user->active_membership_pack);
+				//update the total cost based on the membership pack ID and current total cost
+				$postvals['cp_sys_total_ad_cost'] = get_pack_benefit($postvals['cp_membership_pack'], $postvals['cp_sys_total_ad_cost']);
+				//add featured cost to static pack type
+				if ( isset($postvals['cp_sys_feat_price']) && in_array($postvals['cp_membership_pack']->pack_type, array('required_static', 'static')) )
+						$postvals['cp_sys_total_ad_cost'] += $postvals['cp_sys_feat_price'];
+				//subtract coupon discount from membership static
+				if ( is_object($coupon) && in_array($postvals['cp_membership_pack']->pack_type, array('required_static', 'static')) ) {
+						if($coupon->coupon_discount_type  != '%')
+								$postvals['cp_sys_total_ad_cost'] = $postvals['cp_sys_total_ad_cost'] - (float)$coupon->coupon_discount;
+						else
+								$postvals['cp_sys_total_ad_cost'] = $postvals['cp_sys_total_ad_cost'] - ($postvals['cp_sys_total_ad_cost'] * (((float)($coupon->coupon_discount))/100));
+				}
+		}
 
-    //echo '$_POST PRINT<br/>';
-    //print_r($_POST);
 
-    //echo '<br/><br/>$postvals PRINT<br/>';
-    //print_r($postvals);
-
+		// prevent from minus prices if bigger discount applied
+		if ( $postvals['cp_sys_total_ad_cost'] < 0 )
+				$postvals['cp_sys_total_ad_cost'] = '0.00';	
+	
+   
     // now put the array containing all the post values into the database
     // instead of passing hidden values which are easy to hack and so we
     // can also retrieve it on the next step
@@ -137,9 +164,11 @@ if ( !$error_msg ) {
 
     <div id="step2"></div>
 
-      <h2 class="dotted"><?php _e('Review Your Listing','appthemes');?></h2>
+     <h2 class="dotted"><?php _e( 'Review Your Listing', APP_TD ); ?></h2>
 
             <img src="<?php bloginfo('template_url'); ?>/images/step2.gif" alt="" class="stepimg" />
+            
+            <?php do_action( 'appthemes_notices' ); ?>
 
             <form name="mainform" id="mainform" class="form_step" action="" method="post" enctype="multipart/form-data">
 
@@ -147,36 +176,22 @@ if ( !$error_msg ) {
 
                     <?php
                     // pass in the form post array and show the ad summary based on the formid
-					//print_r($postvals);
                     echo cp_show_review( $postvals );
 
-                    // debugging info
-                    //echo get_option('cp_price_scheme') .'<-- pricing scheme<br/>';
-                    //echo $postvals['cat'] .'<-- catid<br/>';
-                    //echo get_option('cp_cat_price_'.$postvals['cat']) .'<-- cat price<br/>';
-                    //echo $postvals['user_id'] .'<-- userid<br/>';
-                    //echo get_option('cp_price_per_ad') .'<-- listing cost<br/>';
-                    //echo get_option('cp_curr_symbol_pos') .'<-- currency position<br/>'; 
                     ?>
                     
                     <li>
                         <?php if ( $postvals['cp_sys_total_ad_cost'] > 0 ) : ?>
-                        <div class="labelwrapper">
-                            <label><?php _e('Payment Method','appthemes'); ?>:</label>
-                        </div>
-                        
-                        <select name="cp_payment_method" class="dropdownlist required">
-                            <?php if ( get_option('cp_enable_paypal') == 'yes' ) { ?><option value="paypal"><?php echo _e('PayPal', 'appthemes') ?></option><?php } ?>
-                            <?php if ( get_option('cp_enable_bank') == 'yes' ) { ?><option value="banktransfer"><?php echo _e('Bank Transfer', 'appthemes') ?></option><?php } ?>
-                            
-                            <?php cp_action_payment_method(); ?>
-                            
-                        </select>
-                        
-                        <?php endif; ?>
-                        
-                        <div class="clr"></div>
-                        
+										<div class="labelwrapper">
+												<label><?php _e( 'Payment Method', APP_TD ); ?>:</label>
+										</div>
+
+										<select name="cp_payment_method" class="dropdownlist required">
+												<?php cp_action_payment_method(); ?>
+										</select>
+								<?php endif; ?>
+
+								<div class="clr"></div>                        
                     </li>
                     
                 </ol>
@@ -188,16 +203,16 @@ if ( !$error_msg ) {
                 <div class="clr"></div>
 
 
-                <p class="terms"><?php _e('By clicking the proceed button below, you agree to our terms and conditions.','appthemes'); ?>
+                <p class="terms"><?php _e( 'By clicking the proceed button below, you agree to our terms and conditions.', APP_TD ); ?>
                 <br/>
                 <?php _e('Your IP address has been logged for security purposes:','appthemes'); ?> <?php echo $postvals['cp_sys_userIP']; ?>
 				</p>
 
 
-                <p class="btn2">
-                    <input type="button" name="goback" class="btn_orange" value="<?php _e('Go back','appthemes') ?>" onclick="history.back()" />
-                    <input type="submit" name="step2" id="step2" class="btn_orange" value="<?php _e('Proceed ','appthemes'); ?> &rsaquo;&rsaquo;" />
-                </p>
+               <p class="btn2">
+						<input type="button" name="goback" class="btn_orange" value="<?php _e( 'Go back', APP_TD ); ?>" onclick="history.back()" />
+						<input type="submit" name="step2" id="step2" class="btn_orange" value="<?php _e( 'Proceed ', APP_TD ); ?> &rsaquo;&rsaquo;" />
+				</p>
 
                 <input type="hidden" id="oid" name="oid" value="<?php echo $postvals['oid']; ?>" />
 
@@ -212,13 +227,13 @@ if ( !$error_msg ) {
 
 ?>
 
-    <h2 class="dotted"><?php _e('An Error Has Occurred', 'appthemes') ?></h2>
-    
-    <div class="thankyou">
-        <p><?php echo appthemes_error_msg( $error_msg ); ?></p>
-        <input type="button" name="goback" class="btn_orange" value="&lsaquo;&lsaquo; <?php _e('Go Back', 'appthemes') ?>" onclick="history.back()" />
-    </div>
-  
+		<h2 class="dotted"><?php _e( 'An Error Has Occurred', APP_TD ); ?></h2>
+
+		<div class="thankyou">
+				<p><?php echo appthemes_error_msg( $error_msg ); ?></p>
+				<input type="button" name="goback" class="btn_orange" value="&lsaquo;&lsaquo; <?php _e( 'Go Back', APP_TD ); ?>" onclick="history.back()" />
+		</div>
+
 
 <?php
 }

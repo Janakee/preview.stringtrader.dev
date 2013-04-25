@@ -18,6 +18,9 @@ function cp_ajax_uploader_activate()
 	copy(WP_PLUGIN_DIR . "/cp_ajax_image_uploader/classipress_files/step2.php", TEMPLATEPATH . "/includes/forms/step2.php");
 	copy(WP_PLUGIN_DIR . "/cp_ajax_image_uploader/classipress_files/step3.php", TEMPLATEPATH . "/includes/forms/step3.php");
 	copy(WP_PLUGIN_DIR . "/cp_ajax_image_uploader/classipress_files/step-functions.php", TEMPLATEPATH . "/includes/forms/step-functions.php");
+	
+	// remove support for app-upload
+	remove_theme_support('app-plupload');
 }
 register_activation_hook( __FILE__, 'cp_ajax_uploader_activate');
 
@@ -28,12 +31,21 @@ function cp_ajax_uploader_deactivate()
 	copy(WP_PLUGIN_DIR . "/cp_ajax_image_uploader/classipress_files_backup/step2.php", TEMPLATEPATH . "/includes/forms/step2.php");
 	copy(WP_PLUGIN_DIR . "/cp_ajax_image_uploader/classipress_files_backup/step3.php", TEMPLATEPATH . "/includes/forms/step3.php");
 	copy(WP_PLUGIN_DIR . "/cp_ajax_image_uploader/classipress_files_backup/step-functions.php", TEMPLATEPATH . "/includes/forms/step-functions.php");
+	
+	// restore app-upload theme support
+	add_theme_support( 'app-plupload', array(
+	'max_file_size' => get_option('cp_max_image_size') . 'kb',
+	'allowed_files' => get_option('cp_num_images'),
+	) );
+
 }
 register_deactivation_hook( __FILE__, 'cp_ajax_uploader_deactivate');
 
 function cp_ajax_uploader_init()
 {
 	wp_enqueue_script('jquery');
+	// remove support for app-upload
+	remove_theme_support('app-plupload');
 }
 add_action('init', 'cp_ajax_uploader_init');
 

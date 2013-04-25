@@ -17,10 +17,13 @@
 					<h2 class="dotted"><span class="colour"><?php _e( 'Login', APP_TD ); ?></span></h2>
 
 					<?php do_action( 'appthemes_notices' ); ?>
+					
 
-					<p><?php _e( 'Please complete the fields below to login to your account.', APP_TD ); ?></p>
-					<p><?php _e( 'To post an ad or to respond to an ad, you must register and login.', APP_TD ); ?></p>
 
+<div class="reg_instruct">
+				
+					<p><?php _e( 'To post an ad or to respond to an ad, you must <a href="http://preview.stringtrader.com/register/" style="text-decoration: none; color: #0076BE">sign up</a> and login.', APP_TD ); ?></p>
+</div><!-- /reg_instruct -->
 					<div class="left-box">
 
 						<form action="<?php echo wp_login_url(); ?>" method="post" class="loginform" id="login-form">
@@ -49,12 +52,14 @@
 									<?php echo APP_Login::redirect_field(); ?>
 									<input type="hidden" name="testcookie" value="1" />
 								</p>
-
+								
+								<?php wp_register('<p class="register">','</p>'); ?>
+								
 								<p class="lostpass">
 									<a class="lostpass" href="<?php echo appthemes_get_password_recovery_url(); ?>" title="<?php _e( 'Password Lost and Found', APP_TD ); ?>"><?php _e( 'Lost your password?', APP_TD ); ?></a>
 								</p>
 
-								<?php wp_register('<p class="register">','</p>'); ?>
+
 
 								<?php do_action('login_form'); ?>
 

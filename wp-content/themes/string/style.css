@@ -3,7 +3,7 @@ Theme Name: String
 Description: Child for ClassiPress
 Author: Steve C Remixing ReloadWeb (Reload Web Team, R.Mitesh, P. Ahmed)
 Author URI: http://www.stringtrader.com/
-Template: classipress
+Template: classipress 
 Version: 1.2.3
 */
 @import url(http://fonts.googleapis.com/css?family=Coda);
@@ -59,7 +59,7 @@ h3 { margin:0; padding:0; font:bold 14px/1.2em Arial, Helvetica, sans-serif; }
 p.botm12px{ margin:0 0 12px 0; }
 p.lh2em, p.main { margin:0; padding:16px 0; line-height:2em; }
 
-span.big { font-size:13px; }
+span.big { font-size:16px; font-weight: 600 }
 .dotted {  }
 
 h1.single {text-shadow:0 1px 0 #fff; background:none;  }
@@ -217,7 +217,7 @@ option.level-7{}
 
 
 /* breadcrumb */
-#breadcrumb{font-size:11px; margin-top:-10px; padding:10px 10px 10px 5px; text-shadow: 0 1px 0 #FFFFFF;}
+#breadcrumb{font-size:11px; margin-top:-10px; padding:10px 10px 0px 5px; text-shadow: 0 1px 0 #FFFFFF;}
 #crumbs { padding:10px 0; margin-bottom:20px; }
 
 
@@ -229,7 +229,7 @@ option.level-7{}
 .shadowblock { padding:0px;  -khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;  }
 .shadowblock h2 { text-transform:uppercase; }
 .content_right .shadowblock h2 { font-size:18px; text-transform:none; }
-.content_right .shadowblock { padding:15px; }
+.content_right .shadowblock { padding:25px; }
 
 .content_res div.bigleft {  position:relative; }
 .shadowblock .i_featured { position:absolute; left:0; top:0px; display:block; width:88px; height:24px; text-indent:-9009px; 
@@ -240,9 +240,9 @@ background:url(images/i_sold.png) no-repeat left top; z-index:9; }
 
 
 
-.content_left { margin:0; padding-top: 10px; float:left; width:573px;}
+.content_left { margin:0; padding-top: 0px; float:left; width:573px;}
 .content_right { margin:0; padding: 10px; float:right; width:340px;}
-.content_res { margin:0 auto; padding:20px 0 30px; width:940px;}
+.content_res { margin:0 auto; padding:5px 0 30px; width:940px;}
 .content_res .shadowblockdir { height:290px;  }
 .content_res .priceblockbig p.descr { margin:0; padding:6px 0;}
 .content_res .priceblockbig p.location { margin:0; padding:0;}
@@ -285,7 +285,7 @@ background:url(images/i_sold.png) no-repeat left top; z-index:9; }
 .header_menu_res ul li.sfHover a.sf-with-ul { z-index:999; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;}
 ul.header_menu_res ul li.sfHover div { display: block;}
 .header_menu_res ul { z-index:99; margin:0; padding:0; list-style:none; line-height:1; }
-.header_menu_res ul a { padding:5px 10px;position:relative;  z-index:100; display:block;line-height:18px; text-decoration:none; }
+.header_menu_res ul a { padding:5px 15px;position:relative;  z-index:100; display:block;line-height:18px; text-decoration:none; }
 .header_menu_res ul li:hover a {-khtml-border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
 .header_menu_res ul li.current_page_item, .header_menu_res ul li.current_page_parent a { -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;}
 .header_menu_res ul li li.current_page_item {  }
@@ -463,7 +463,7 @@ background:url(images/i_sold.png) no-repeat left top;  }
 
 
 .post-left {float:left;padding-right:15px; width:15%; }
-.post-left img { height:auto; max-width:none; }
+.post-left img { height:auto;  }
 /*.post-left a.preview img:hover {opacity:0.6;}*/
 .post-block .post-right {float:right;max-width:462px;min-width:380px;}
 .post-block .post-right-no-img {float:right;width:100%;}
@@ -555,9 +555,9 @@ span.clock span {padding-left:25px;margin-top:1px;}
 .tabprice { margin:0 0 20px 0;}
 .tabprice ul.tabnavig { margin:0; padding:0; height:31px; list-style:none;}
 .tabprice ul.tabnavig li { margin:0 -3px 0 8px; padding:0; float:left; font-size:13px;  border-bottom:none; -khtml-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0; -webkit-border-radius: 6px 6px 0 0; border-radius: 6px 6px 0 0;}
-.tabprice ul.tabnavig li a { font-weight:bold;display:block; margin:0; padding:5px 15px; color:#868686; text-decoration:none; background:#fff; border:1px solid #fff; border-bottom:none; -khtml-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0; -webkit-border-radius: 6px 6px 0 0; border-radius: 6px 6px 0 0;text-shadow:0 1px 0 #fff;}
+.tabprice ul.tabnavig li a { font-weight:bold;display:block; margin:0; padding:5px 15px; color:#0076BE; text-decoration:none; background:#fff; border:1px solid #ffffff; border-bottom:none; -khtml-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0; -webkit-border-radius: 6px 6px 0 0; border-radius: 6px 6px 0 0;text-shadow:0 1px 0 #fff;}
 .tabprice ul.tabnavig li a:hover { color:#000;background:#fff;}
-.tabprice ul.tabnavig li a.selected { padding:5px 15px 6px; border:dashed 1px #cce5f6; border-bottom:1px solid #fff; color:#0076be; background:#fff;}
+.tabprice ul.tabnavig li a.selected { padding:5px 15px 6px; border:dashed 1px #cce5f6; border-bottom:1px solid #fff; color:#3b4449; background:#fff;}
 .tabprice div.pricetab{margin:-1px 0 4px 0; padding:10px 16px; background:#fff; border:1px solid #cce5f6; -khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}
 .tabprice div.singletab{margin:-1px 0 4px 0; padding:7px; background:#FFF; border:1px dashed #cce5f6; -khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}
 .tabprice div.postertab{margin:-1px 0 4px 0; padding:5px 15px 15px; background:#FFF; border:1px dashed #cce5f6; -khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}
@@ -579,6 +579,8 @@ div#mcwrap {height:70px;}
 /* login page & field styles */
 .loginform p label{ width:130px;  padding:4px 10px 0 0;  float:left;  clear:both;  font-weight:bold;  text-align:right}
 div#checksave{ padding-left:140px}
+.reg_instruct {font-size: large}
+.register {font-size:large}
 .mid, .text { border:1px solid #CCC;  margin-bottom:10px;  padding:7px;  width:250px; -khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}
 .mid:focus, .text:focus {border:1px solid #CCC; background-color:#F9F9F9}
 .checkbox{ clear:both;  padding-left:10px}
@@ -718,7 +720,7 @@ div#tagcloud a:hover{ line-height:1.2; background:none repeat scroll 0 0 #f0f8fe
 .content_res .priceblocksmall .post-thumb{margin:0; padding:0; float:left}
 
 /* misc styles */
-input#getcat {margin-top:3px; float: right;}
+input#getcat {margin-top:6px; margin-left: 160px;}
 .fileupload{padding:7px;}
 .mbtn{padding:5px 10px}
 .mbtn:hover{text-decoration:none !important}
@@ -1017,7 +1019,7 @@ p.alt-text {padding-top:10px;}
 .content_res .shadowblockdir_large {
 	background:none !important;
 	border:1px solid #D7D7D7 !important;
-	padding: 0 0 5px !important;
+	padding: 0px 0px 10px NaNpx;
 }
 
 .content_res .slides_container, .content_res .pagination {
@@ -1085,6 +1087,7 @@ a:hover.attachment-delete { background: #64ACD8; }
 /* main area */
 .content_left { width:62%;  }
 .content_right { width:36.8; }
+.post-left img { height:auto; max-width:75px; }
 
 /* single page ad post ------- */
 .content_res div.bigright { width:45%; }
@@ -1105,20 +1108,26 @@ a:hover.attachment-delete { background: #64ACD8; }
 .searchblock .form_search input#s { width:90% !important;  }
 
 /* home featured ad slider ---------- */
+ /* hide featured slider */
+ #slider_sc { display:none; }
+ .slider_sc { display:none; }
 .slider {  width: 89% !important; }
 .slider ul li {width: 99px !important; }
 .content_res .attachment-sidebar-thumbnail { width:85px; height:85px; }
 
 
 /* main area ------------*/
-.content_left { width:62%;  }
-.content_right { width:36.8%; }
+
+.content_left { width:85%;  }
+.content_right { float:left }
+img.attachment-ad-small {max-width: 150px}
+.post-right-full {margin-left: 20px}
 
 /* sidebar area ------------*/
 .post-block { width:99.5%; }
 .post-block-out { width:100%; display:block;  }
 .post-block .post-right { max-width:none;  min-width: inherit; }
-.post-block .full { width: 75%; }
+.post-block .full { width: 72%; }
 
 /* content area ------------*/
 .mbtn { display: inline-block; margin-bottom: 5px; }
@@ -1202,6 +1211,7 @@ div#checksave { padding-left:0; }
 /* main area ------------*/
 .content_left { width:100%;  }
 .content_right { width:100%; }
+img.attachment-ad-small {max-width: 100px}
 
 /* sidebar area ------------*/
 .post-block { width:99.5%; }

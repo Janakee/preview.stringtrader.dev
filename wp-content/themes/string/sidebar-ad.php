@@ -20,7 +20,7 @@ if ( !empty($custom_fields[$app_abbr.'_zipcode']) || !empty($custom_fields[$app_
               <li><a href="#priceblock1"><span class="big"><?php _e('Map', APP_TD) ?></span></a></li>
           <?php } ?>
           <li><a href="#priceblock2"><span class="big"><?php _e('Poster Info', APP_TD) ?></span></a></li>
-          <li><a href="#priceblock3"><span class="big"><?php _e('Contact Poster', APP_TD) ?></span></a></li>
+          <li><a href="#priceblock3"><span class="big"><?php _e('Make An Offer', APP_TD) ?></span></a></li>
         </ul>
 
     <?php if ( $gmap_active ) { ?>
@@ -85,8 +85,7 @@ if ( !empty($custom_fields[$app_abbr.'_zipcode']) || !empty($custom_fields[$app_
 
             </div>
 
-              
-			<div class="pad5"></div>
+		<div class="pad5"></div>
 
 			<h3><?php _e('Other items listed by',APP_TD); ?> <?php the_author_meta('display_name'); ?></h3>
 

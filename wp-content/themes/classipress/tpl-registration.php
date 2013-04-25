@@ -7,7 +7,7 @@ if ( isset( $_REQUEST['redirect_to'] ) )
 
 if (!isset($redirect))
 	$redirect = home_url();
-
+	
 $show_password_fields = apply_filters('show_password_fields', true);
 ?>
 
@@ -22,7 +22,7 @@ $show_password_fields = apply_filters('show_password_fields', true);
 
 				<div class="shadowblock">
 
-					<h2 class="dotted"><span class="colour"><?php _e( 'Register', APP_TD ); ?></span></h2>
+					<h2 class="dotted"><span class="colour"><?php _e( 'Sign Up', APP_TD ); ?></span></h2>
 
 					<?php do_action( 'appthemes_notices' ); ?>
 

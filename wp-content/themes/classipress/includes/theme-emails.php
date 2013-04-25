@@ -277,16 +277,17 @@ function cp_contact_ad_owner_email($postID) {
     $siteurl = trailingslashit(get_option('home'));
     $permalink = get_permalink();
 
-    $message  = sprintf( __( 'Someone is interested in your ad listing: %s', APP_TD ), $permalink ) . "\r\n\r\n";
+    $message  = sprintf( __( 'Someone is interested in the listing you placed on String Trader: %s', APP_TD ), $permalink ) . "\r\n\r\n";
     // $message  = sprintf( __( 'From: %s - %s', APP_TD ), $from_name, $from_email) . "\r\n\r\n";
+        $message .= sprintf( __( 'From: %s', APP_TD ), stripslashes($from_name) ) . "\r\n";
+    $message .= sprintf( __( 'E-mail: %s', APP_TD ), $from_email ) . "\r\n\r\n";
 		$fixPostMessage = stripslashes($_POST['message']);
     $message .= '"' . wordwrap(strip_tags($fixPostMessage), 70) . '"' . "\r\n\r\n\r\n";
-    $message .= sprintf( __( 'Name: %s', APP_TD ), stripslashes($from_name) ) . "\r\n";
-    $message .= sprintf( __( 'E-mail: %s', APP_TD ), $from_email ) . "\r\n\r\n\r\n\r\n";
+    $message .= 'To respond to the inquiry, contact the String Trader member directly at the email address above or by replying to this message.  String Trader does not track or get involved in contact between users.  Please be polite to one another. ' . "\r\n\r\n";
     $message .= '-----------------------------------------' . "\r\n";
     $message .= sprintf( __( 'This message was sent from %s', APP_TD ), $sitename ) . "\r\n";
     $message .=  $siteurl . "\r\n\r\n";
-		$message .= __( 'Sent from IP Address: ', APP_TD ) . appthemes_get_ip() . "\r\n\r\n"; 
+	//	$message .= __( 'Sent from IP Address: ', APP_TD ) . appthemes_get_ip() . "\r\n\r\n"; 
 
     // ok let's send the email
     wp_mail($mailto, $subject, $message, $headers);
