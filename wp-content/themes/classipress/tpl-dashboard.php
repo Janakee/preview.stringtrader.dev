@@ -29,8 +29,14 @@ $display_user_name = cp_get_user_name();
 
 						<?php do_action( 'appthemes_notices' ); ?>
 
-						<p><?php _e( 'Below you will find a listing of all your classified ads. Click on one of the options to perform a specific task. If you have any questions, please contact the site administrator.', APP_TD ); ?></p>
-
+						<p><?php _e( 'Below you will find a listing of all your classified ads. Click on one of the icons next to the add you want to manage to perform a specific task.', APP_TD ); ?></p>
+<div class="edit_instructions">
+<p>
+To edit an add click the pencil <img class="alignnone" alt="" src="http://preview.stringtrader.com/wp-content/themes/classipress/images/pencil.png" width="16" height="16" />. </p>
+<p>To delete an add click the red <img class="alignnone" alt="" src="http://preview.stringtrader.com/wp-content/themes/classipress/images/cross.png" width="16" height="16" />. </p>
+<p>If you have accepted an offer, but have not yet received payment, you can click <img class="alignnone" alt="" src="http://preview.stringtrader.com/wp-content/themes/classipress/images/pause.png" width="16" height="16" />  to pause the ad until the sale is completed.</p>
+<p>When a sale is complete, click Mark Sold.</p>
+</div><!-- /edit_instructions -->
 						<table border="0" cellpadding="4" cellspacing="1" class="tblwide">
 							<thead>
 								<tr>

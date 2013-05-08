@@ -48,9 +48,11 @@ function appthemes_plupload_form( $post_id = false ) {
 				</ul>
 			</div>
 			<div class="app-attachment-info">
-				<a id="app-attachment-upload-pickfiles" class="button" href="#"><?php _e('Add Image', APP_TD); ?></a>
+				<a id="app-attachment-upload-pickfiles" class="add_image_button" href="#"><?php _e('Add Images', APP_TD); ?></a>
+				<div class="clear"></div><br>
 				<p class="small"><?php printf( __('You are allowed to upload %s file(s).', APP_TD), $options['allowed_files'] ); ?> <?php printf( __('Maximum file size: %s.', APP_TD), strtoupper($options['max_file_size']) ); ?></p>
 				<?php appthemes_plupload_bypass_flash(); ?>
+				<p> Note: The first image that you upload will be the featured image in your ad.</p>
 			</div>
 		</div>
 		<div class="clear"></div>

@@ -74,5 +74,6 @@ if ( !is_admin() ) {
     add_action('wp_print_styles', 'add_classisky_responsive_js', 20);
 }
 
-/* adding larger thumbnails as suggested here http://forums.appthemes.com/classipress-general-discussion/how-change-image-size-thumbnail-39939/ */
+/* steve adding code to support short codes in widgets*/
 
+add_filter('widget_text', 'do_shortcode'); 

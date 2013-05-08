@@ -2252,7 +2252,7 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size('ad-thumb', 100, 100, true);
 	add_image_size('ad-small', 150, 150, true);
 	add_image_size('ad-medium', 250, 250, true);
-	//add_image_size('ad-large', 500, 500);
+	add_image_size('ad-large', 800, 800);
 }
 
 // Set the content width based on the theme's design and stylesheet.

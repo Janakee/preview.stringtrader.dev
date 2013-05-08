@@ -38,17 +38,17 @@ global $appthemes_extended_profile_fields;
 
 $appthemes_extended_profile_fields = array(
 	'active_membership_pack' => array(
-		'title'=> __( 'Active Membership Pack:', APP_TD ),
+		'title'=> __( 'Active Membership Type:', APP_TD ),
 		'protected' => 'yes',
 		'type' => 'active_membership_pack',
-		'description' =>  __( 'Custom Membership Pack active for the user. Can only be changed by admins.', APP_TD ),
+		'description' =>  __( 'Active membership type if any.', APP_TD ),
 		'admin_description' => __( 'Enter Pack ID to activate membership for user.', APP_TD )
 	),
 	'membership_expires' => array(
 		'title'=> __( 'Membership Pack Expires Date:', APP_TD ),
 		'protected' => 'yes',
 		'type' => 'date',
-		'description' =>  __( 'Date for unlimited/dealer posting (if enabled). Can only be changed by admins.', APP_TD ),
+		'description' =>  __( '', APP_TD ),
 		'admin_description' => __( 'Enter date in format <code>Y-m-d H:i:s</code> Example date: <code>2012-01-26 13:25:00</code>', APP_TD )
 	)
 );

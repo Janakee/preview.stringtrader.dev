@@ -19,8 +19,8 @@ if ( !empty($custom_fields[$app_abbr.'_zipcode']) || !empty($custom_fields[$app_
           <?php if ( $gmap_active ) { ?>
               <li><a href="#priceblock1"><span class="big"><?php _e('Map', APP_TD) ?></span></a></li>
           <?php } ?>
-          <li><a href="#priceblock2"><span class="big"><?php _e('Poster Info', APP_TD) ?></span></a></li>
-          <li><a href="#priceblock3"><span class="big"><?php _e('Make An Offer', APP_TD) ?></span></a></li>
+          <li><a href="#priceblock2"><span class="big"><?php _e('Trader Profile', APP_TD) ?></span></a></li>
+          <li><a href="#priceblock3"><span class="big_button"><?php _e('Make An Offer', APP_TD) ?></span></a></li>
         </ul>
 
     <?php if ( $gmap_active ) { ?>

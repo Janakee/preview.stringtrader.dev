@@ -60,6 +60,7 @@ p.botm12px{ margin:0 0 12px 0; }
 p.lh2em, p.main { margin:0; padding:16px 0; line-height:2em; }
 
 span.big { font-size:16px; font-weight: 600 }
+span.big_button { background: #7598C9; color: white;font-size: medium; text-transform: uppercase; font-weight: 400; padding:5px 10px; -khtml-border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;  margin-bottom: 15px; }
 .dotted {  }
 
 h1.single {text-shadow:0 1px 0 #fff; background:none;  }
@@ -116,7 +117,8 @@ p.red { color: #CC0000; }
 .container { margin:0; padding:0; width:100%; font:normal 12px/1.5em Arial, Helvetica, sans-serif; color:#4f4f4f; }
 
 /* header */
-.logotype {float: left; font-family: 'Montserrat Subrayada', sans-serif;font-weight: 700;font-size: 30px;padding-top: 5px; color: #333333}
+.logotype {float: left; font-family: 'Montserrat Subrayada', sans-serif;font-weight: 700;font-size: 30px;padding-top: 5px; color: #2F7CB2}
+a.logotype:hover,a.logotype:active {font-size:105%; color:#2F7CB2;}
 .beta {float: left;font-size: 14px;padding-top: 5px; color: #333333}
 .mobile_post_btn {float:right;display:inline;}
 .login {float:right; font-size: medium; display:inline;}
@@ -241,7 +243,7 @@ background:url(images/i_sold.png) no-repeat left top; z-index:9; }
 
 
 .content_left { margin:0; padding-top: 0px; float:left; width:573px;}
-.content_right { margin:0; padding: 10px; float:right; width:340px;}
+.content_right { margin-top:15px; padding: 10px; float:right; width:340px;}
 .content_res { margin:0 auto; padding:5px 0 30px; width:940px;}
 .content_res .shadowblockdir { height:290px;  }
 .content_res .priceblockbig p.descr { margin:0; padding:6px 0;}
@@ -279,7 +281,7 @@ background:url(images/i_sold.png) no-repeat left top; z-index:9; }
 /* main nav menu global styles  */
 .header_menu_res ul, .header_menu_res ul ul, .header_menu_res ul ul ul { float:left; margin:0; padding:0; list-style:none;}
 .header_menu_res ul li.first { padding-left:0; background:none;}
-.header_menu_res ul li a {  text-decoration:none; font-weight:bold; font-family: 'Montserrat Subrayada',sans-serif;font-size: 18px;border-left:0px solid #d7d7d7;}
+.header_menu_res ul li a {  text-decoration:none; font-weight:bold; font-family: 'Montserrat Subrayada',sans-serif;font-size: 18px;border-left:2px solid #d7d7d7;}
 .header_menu_res ul li:hover a {  z-index:999;}
  .header_menu_res ul li.mega:hover { -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
 .header_menu_res ul li.sfHover a.sf-with-ul { z-index:999; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;}
@@ -340,7 +342,7 @@ div#adv_categories .catcol ul li {float:none; margin:0; padding:0;}
 div#adv_categories .catcol ul li a {margin:0; padding:4px 0; text-decoration:none;}
 div#adv_categories .catcol ul.maincat-list {margin:0; padding:0;}
 div#adv_categories .catcol ul li.maincat {width:200px; text-transform:uppercase; font-weight:bold; float:left; margin:0; padding:6px 0; -khtml-border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
-div#adv_categories .catcol ul li.maincat a { display:inline; line-height:20px; padding:0 0 0 10px}
+div#adv_categories .catcol ul li.maincat a { display:inline; line-height:20px;  border-left: 0 none; padding:0 0 0 10px}
 div#adv_categories .catcol ul li.maincat a:hover { text-decoration:underline !important;}
 div#adv_categories .catcol ul.subcat-list {padding:5px; margin:6px 0 -6px; width:100%; }
 div#adv_categories .catcol ul.subcat-list li a { font-weight:normal; text-transform:none; }
@@ -506,7 +508,7 @@ a.post-gallery img:hover {border:1px solid #AFAFAF}
 span.user {background:url("images/user-silhouette.png") no-repeat scroll 3px 0 transparent;}
 span.user a {padding:0 6px 0 24px;}
 
-span.owner {background:url("images/user-silhouette.png") no-repeat scroll 3px -2px transparent;}
+span.owner {background:url("images/user-silhouette.png") no-repeat scroll 3px -2px transparent;display: none;}
 span.owner a {display: none}
 span.folder {background:url("images/folder-open.png") no-repeat scroll 0 0 transparent;line-height:16px;display:inline-block;}
 span.folder a {display: none}
@@ -542,7 +544,7 @@ span.clock span {padding-left:25px;margin-top:1px;}
 .tabcontrol { margin:0 0 20px 0; min-height: 600px;}
 .tabcontrol ul.tabnavig { margin:0; padding:0; height:31px; list-style:none;}
 .tabcontrol ul.tabnavig li { margin:0 -3px 0 8px; padding:0; float:left; border:none; border-bottom:none;-khtml-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0; -webkit-border-radius: 6px 6px 0 0; border-radius: 6px 6px 0 0;}
-.tabcontrol ul.tabnavig li a { font-weight:bold;display:block; margin:0; padding:5px 15px; text-decoration:none; -khtml-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0; -webkit-border-radius: 6px 6px 0 0; border-radius: 6px 6px 0 0; }
+.tabcontrol ul.tabnavig li a { font-weight:bold;display:block; margin:0; padding:5px 15px; text-decoration:none; -khtml-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0; -webkit-border-radius: 6px 6px 0 0; border-radius: 6px 6px 0 0; display: none; }
 .tabcontrol ul.tabnavig li a:hover { color:#000;background:none;}
 .tabcontrol ul.tabnavig li a.selected { padding:5px 15px 6px;  }
 .tabcontrol div.undertab { margin:-1px 0 8px; padding:0px 16px; }
@@ -758,7 +760,7 @@ input#getcat {margin-top:6px; margin-left: 160px;}
 
 /* author page */
 #user-photo{padding:15px 15px 10px 0; float:left}
-.author-main{margin-left:125px; padding:10px 0 0 0; min-height:140px;}
+.author-main{margin-left:125px; padding:10px 0 0 0; min-height:60px;}
 ul.author-info { padding:0; list-style: none outside none;}
 ul.author-info li {list-style:none outside none;}
 #sidebar .widget ul li{background:transparent url(images/bullet-grey.png) no-repeat scroll 7px 12px; border-bottom:1px solid #EEEEEE}
@@ -779,12 +781,13 @@ select#display_name {line-height:1em; min-width: 265px;-khtml-border-radius: 6px
 .form-table textarea {padding:7px; width:90%; -khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}
 .form-table input:focus, .form-table textarea:focus {border:1px solid #CCCCCC;background-color: #F9F9F9;}
 span.description {font-size:10px; font-style:italic;}
-#pass-strength-result {border-style:solid;border-width:1px;float:left;margin:12px 5px 5px 1px;padding:7px;text-align:center;width:248px;-khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}
+#pass-strength-result {border-style:solid;border-width:1px;float:left;margin:6px 5px 5px 140px;padding:7px;text-align:center;width:248px;-khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;}
 #pass-strength-result.good {background-color:#FFEC8B;border-color:#FFCC00 !important;}
 #pass-strength-result {background-color:#EEEEEE;border-color:#DDDDDD !important;}
 #pass-strength-result.bad {background-color:#FFB78C;border-color:#FF853C !important;}
 #pass-strength-result.strong {background-color:#C3FF88;border-color:#8DFF1C !important;}
 #pass-strength-result.short {background-color:#FFA0A0;border-color:#F04040 !important;}
+.indicator-hint {float: left; margin-left: 140px; margin-bottom: 10px;}
 #userphoto p.image {background-color:white;border:1px solid #CCCCCC;float:left;margin-bottom:0;margin-right:20px;padding:3px;text-align:center;}
 #userphoto p.image-thumb {float:left;margin-bottom:0;margin-right:20px;padding:3px;text-align:center;}
 #userphoto p.image img {border:1px solid #CCCCCC;}
@@ -1073,6 +1076,11 @@ background: #64ACD8 url("blue/buttonbg.png") repeat-x left top; border: none;
 color: #fff; text-decoration: none; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25); } 
 a:hover.attachment-delete { background: #64ACD8; }
 
+/* Steve -  edit ads page only */
+.edit_instructions {font-size: small; margin-left: 40px}
+
+/* Steve -  add image button an new ad page */
+.add_image_button {background: #7598C9; font-size: large;color: white;text-decoration: none; padding:5px 10px; -khtml-border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;  margin-bottom: 15px; }
 
 /*======================================================= Media Screen ========================================================*/
 @media screen and (min-width: 990px) and (max-width: 1000px) { 
@@ -1687,4 +1695,19 @@ table#memberships th, table#memberships tr, table#memberships td { padding:5px; 
 .adblock iframe, .adblock { width:100% !important; }
 .adblock iframe img.img_ad { width:100% !important; }
 
+}
+/* Steve rounding corners of contact forms */
+.wpcf7-text, .wpcf7-form textarea {
+ border: 1px solid #CCCCCC;
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+/* Steve styling Mail chimp form */
+#mc_signup_form .mc_input{
+ border: 1px solid #CCCCCC;
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom: 10px;
+    padding: 7px;
+    min-width: 150px;
 }
